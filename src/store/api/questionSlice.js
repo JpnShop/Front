@@ -4,7 +4,7 @@ export const questionApi = createApi({
   reducerPath: 'questionApi',
   // baseQuery,
   baseQuery: fetchBaseQuery({
-    baseUrl: import.meta.env.VITE_BASE_URL,
+    baseUrl: import.meta.env.VITE_BASE_URL2,
   }),
   endpoints: (builder) => ({
     //카드 상품 불러오기
@@ -18,7 +18,7 @@ export const questionApi = createApi({
     addQuestion: builder.mutation({
       query: ({ data }) => ({
         url: `customers/questions`,
-        method: 'PUT',
+        method: 'POST',
         // mode: 'cors',
         headers: {
           'Content-Type': 'multipart/form-data',

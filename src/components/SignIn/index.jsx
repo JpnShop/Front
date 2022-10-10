@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react'
+import GoogleBtn from './GoogleBtn'
 import { ReactComponent as GooGleIcon } from '/public/assets/google.svg'
 import { ReactComponent as LineIcon } from '/public/assets/line.svg'
 import Input from './input'
@@ -80,11 +81,12 @@ const SignIn = () => {
             비밀번호 찾기
           </span>
         </div>
-        <Button classprop="justify-between border border-black-100 mt-6 gap-2">
+        {/* <Button classprop="justify-between border border-black-100 mt-6 gap-2">
           <GooGleIcon className="ml-3" />
           <span>Googleでログイン</span>
           <GooGleIcon className="mr-3 opacity-0" />
-        </Button>
+        </Button> */}
+        <GoogleBtn />
         <Button classprop="justify-between border text-white border-[#60C545] mt-6 gap-2 bg-[#60C545]">
           <LineIcon className="ml-3" />
           <span>LINEでログイン</span>

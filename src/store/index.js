@@ -4,6 +4,7 @@ import { cartApi } from './api/cartApiSlice'
 import { magazineApi } from './api/magazineSlice'
 import { questionApi } from './api/questionSlice'
 import { refundApi } from './api/refundApiSlice'
+import { producttApi } from './api/productSlice'
 import userReducer from './slices/userSlice'
 import productReducer from './slices/productSlice'
 
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
   [magazineApi.reducerPath]: magazineApi.reducer,
   [questionApi.reducerPath]: questionApi.reducer,
   [refundApi.reducerPath]: refundApi.reducer,
+  [producttApi.reducerPath]: producttApi.reducer,
   user: userReducer,
   product: productReducer,
 })
@@ -24,6 +26,7 @@ export const store = configureStore({
       magazineApi.middleware,
       questionApi.middleware,
       refundApi.middleware,
+      producttApi.middleware,
     ]),
 })
 

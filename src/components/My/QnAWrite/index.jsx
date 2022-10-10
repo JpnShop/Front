@@ -127,10 +127,10 @@ const index = () => {
     )
   })
 
-  // useEffect(() => {
-  //   console.log('imageFile', imageFile)
-  //   console.log('userValue', userValue)
-  // }, [imageFile, userValue])
+  useEffect(() => {
+    console.log('imageFile', imageFile)
+    console.log('userValue', userValue)
+  }, [imageFile, userValue])
 
   return (
     <>
