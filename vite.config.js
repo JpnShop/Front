@@ -11,14 +11,6 @@ export default defineConfig({
     alias: [{ find: '~', replacement: resolve(__dirname) }],
   },
   // server: {
-  //   proxy: {
-  //     '/api': {
-  //       target: 'http://43.200.38.47:9090',
-  //       changeOrigin: true,
-  //       rewrite: (path) => path.replace(/^\/api/, ''),
-  //       secure: false,
-  //       ws: true,
-  //     },
-  //   },
+  //   port: 3006,
   // },
 })

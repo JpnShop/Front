@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Modal from '../common/Modal'
 import NextBtn from '../common/NextBtn'
-import Email from './email'
+import Email from './Email'
 const EMAIL_REGEX =
   /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/
 

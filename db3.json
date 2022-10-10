@@ -1,21 +1,20 @@
 [
   {
     "productId": 1,
-    "type": "women",
     "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
     "tags": "women, 가방, aroundann, lena",
     "detailList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory_model-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory_model-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory_model-3.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory_model-4.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory_model-5.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory_model-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory_model-3.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory_model-4.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory_model-5.jpg"
     ],
     "detailThumbList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory.jpg",
-      " https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory-3.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory-4.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory-3.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory-4.jpg"
     ],
     "productName": "lena bag ivory",
     "productOption": null,
@@ -27,21 +26,20 @@
   },
   {
     "productId": 2,
-    "type": "women",
     "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
     "tags": "women, 가방, aroundann, lena",
     "detailList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black_model-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black_model-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black_model-3.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black_model-4.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black_model-5.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black_model-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black_model-3.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black_model-4.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black_model-5.jpg"
     ],
     "detailThumbList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black-3.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black-4.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black-3.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black-4.jpg"
     ],
     "productName": "lena bag black",
     "productOption": null,
@@ -53,22 +51,21 @@
   },
   {
     "productId": 3,
-    "type": "women",
     "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
     "tags": "women, 가방, aroundann, Samantha",
     "detailList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey_model-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey_model-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey_model-3.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey_model-4.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey_model-5.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey_model-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey_model-3.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey_model-4.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey_model-5.jpg"
     ],
     "detailThumbList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey-3.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey-4.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey-5.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey-3.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey-4.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey-5.jpg"
     ],
     "productName": "Samantha bag grey",
     "productOption": null,
@@ -80,18 +77,17 @@
   },
   {
     "productId": 4,
-    "type": "women",
     "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
     "tags": "women, 가방, aroundann, Bella",
     "detailList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_pink_model-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_pink_model-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_pink_model-3.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_pink_model-4.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_pink_model-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_pink_model-3.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_pink_model-4.jpg"
     ],
     "detailThumbList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_pink-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_pink-2.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_pink-2.jpg"
     ],
     "productName": "Bella bag pink",
     "productOption": null,
@@ -103,18 +99,17 @@
   },
   {
     "productId": 5,
-    "type": "women",
     "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
     "tags": "women, 가방, aroundann, Bella",
     "detailList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_black_model-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_black_model-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_black_model-3.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_black_model-4.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_black_model-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_black_model-3.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_black_model-4.jpg"
     ],
     "detailThumbList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_black-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_black-2.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_black-2.jpg"
     ],
     "productName": "Bella bag black",
     "productOption": null,
@@ -126,19 +121,18 @@
   },
   {
     "productId": 6,
-    "type": "women",
     "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
     "tags": "women, 가방, aroundann, Kristin",
     "detailList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_ivory_model-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_ivory_model-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_ivory_model-3.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_ivory_model-4.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_ivory_model-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_ivory_model-3.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_ivory_model-4.jpg"
     ],
     "detailThumbList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_ivory-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_ivory-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_ivory-3.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_ivory-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_ivory-3.jpg"
     ],
     "productName": "Kristin bag ivory",
     "productOption": null,
@@ -150,19 +144,18 @@
   },
   {
     "productId": 7,
-    "type": "women",
     "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
     "tags": "women, 가방, aroundann, Kristin",
     "detailList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_black_model-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_black_model-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_black_model-3.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_black_model-4.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_black_model-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_black_model-3.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_black_model-4.jpg"
     ],
     "detailThumbList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_black-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_black-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_black-3.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_black-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_black-3.jpg"
     ],
     "productName": "Kristin bag black",
     "productOption": null,
@@ -174,18 +167,17 @@
   },
   {
     "productId": 8,
-    "type": "women",
     "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
     "tags": "women, 가방, aroundann, Ami",
     "detailList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Ami+bag_black_model-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Ami+bag_black_model-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Ami+bag_black_model-3.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Ami+bag_black_model-4.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Ami+bag_black_model-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Ami+bag_black_model-3.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Ami+bag_black_model-4.jpg"
     ],
     "detailThumbList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Ami+bag_black-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Ami+bag_black-2.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Ami+bag_black-2.jpg"
     ],
     "productName": "Ami bag black",
     "productOption": null,
@@ -197,19 +189,18 @@
   },
   {
     "productId": 9,
-    "type": "women",
     "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
     "tags": "women, 가방, aroundann, Rinda",
     "detailList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_pink_model-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_pink_model-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_pink_model-3.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_pink_model-4.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_pink_model-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_pink_model-3.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_pink_model-4.jpg"
     ],
     "detailThumbList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_pink-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_pink-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_pink-3.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_pink-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_pink-3.jpg"
     ],
     "productName": "Rinda bag pink",
     "productOption": null,
@@ -221,19 +212,18 @@
   },
   {
     "productId": 10,
-    "type": "women",
     "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
     "tags": "women, 가방, aroundann, Rinda",
     "detailList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_ivory_model-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_ivory_model-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_ivory_model-3.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_ivory_model-4.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_ivory_model-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_ivory_model-3.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_ivory_model-4.jpg"
     ],
     "detailThumbList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_ivory-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_ivory-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_ivory-3.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_ivory-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_ivory-3.jpg"
     ],
     "productName": "Rinda bag ivory",
     "productOption": null,
@@ -245,18 +235,17 @@
   },
   {
     "productId": 11,
-    "type": "women",
     "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
     "tags": "women, 가방, aroundann, troi",
     "detailList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/troi+bag_black_model-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/troi+bag_black_model-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/troi+bag_black_model-3.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/troi+bag_black_model-4.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/troi+bag_black_model-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/troi+bag_black_model-3.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/troi+bag_black_model-4.jpg"
     ],
     "detailThumbList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/troi+bag_black-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/troi+bag_black-2.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/troi+bag_black-2.jpg"
     ],
     "productName": "troi bag black",
     "productOption": null,
@@ -268,19 +257,18 @@
   },
   {
     "productId": 12,
-    "type": "women",
     "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
     "tags": "women, 가방, aroundann, Wrinkle",
     "detailList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Wrinkle+bag_ivory_model-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Wrinkle+bag_ivory_model-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Wrinkle+bag_ivory_model-3.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Wrinkle+bag_ivory_model-4.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Wrinkle+bag_ivory_model-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Wrinkle+bag_ivory_model-3.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Wrinkle+bag_ivory_model-4.jpg"
     ],
     "detailThumbList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Wrinkle+bag_ivory-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Wrinkle+bag_ivory-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Wrinkle+bag_ivory-3.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Wrinkle+bag_ivory-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Wrinkle+bag_ivory-3.jpg"
     ],
     "productName": "Wrinkle bag ivory",
     "productOption": null,
@@ -292,21 +280,20 @@
   },
   {
     "productId": 13,
-    "type": "women",
     "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
     "tags": "women, 가방, aroundann, Double",
     "detailList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown_model-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown_model-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown_model-3.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown_model-4.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown_model-5.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown_model-6.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown_model-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown_model-3.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown_model-4.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown_model-5.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown_model-6.jpg"
     ],
     "detailThumbList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown-3.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown-4.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown-3.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown-4.jpg"
     ],
     "productName": "Double bag brown",
     "productOption": null,
@@ -318,20 +305,19 @@
   },
   {
     "productId": 14,
-    "type": "women",
     "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
     "tags": "패션, 가방, 숄더백, women, aroundann, Sally",
     "detailList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory_model-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory_model-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory_model-3.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory_model-4.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory_model-5.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory_model-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory_model-3.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory_model-4.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory_model-5.jpg"
     ],
     "detailThumbList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory-3.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory-3.jpg"
     ],
     "productName": "Sally bag ivory",
     "productOption": null,
@@ -343,20 +329,19 @@
   },
   {
     "productId": 15,
-    "type": "women",
     "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
     "tags": "패션, 가방, 숄더백, women, aroundann, Sally",
     "detailList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown_model-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown_model-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown_model-3.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown_model-4.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown_model-5.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown_model-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown_model-3.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown_model-4.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown_model-5.jpg"
     ],
     "detailThumbList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown-3.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown-3.jpg"
     ],
     "productName": "Sally bag ivory",
     "productOption": null,
@@ -368,19 +353,18 @@
   },
   {
     "productId": 16,
-    "type": "women",
     "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
     "tags": "패션, 가방, 숄더백, women, aroundann, Sally",
     "detailList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black_model-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black_model-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black_model-3.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black_model-4.jpghttps://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black_model-5.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black_model-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black_model-3.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black_model-4.jpg\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black_model-5.jpg"
     ],
     "detailThumbList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black-3.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black-3.jpg"
     ],
     "productName": "Sally bag black",
     "productOption": null,
@@ -392,18 +376,17 @@
   },
   {
     "productId": 17,
-    "type": "women",
     "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/kumebrand.png",
     "tags": "패션, 의류, 상의, women",
     "detailList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-2.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-3.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-4.jpghttps://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-5.jpghttps://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-6.jpghttps://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-7.jpghttps://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-8.jpghttps://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-9.jpghttps://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-10.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-2.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-3.jpg",
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-4.jpg\n         https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-5.jpg\n         https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-6.jpg\n         https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-7.jpg\n         https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-8.jpg\n         https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-9.jpg\n         https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-10.jpg"
     ],
     "detailThumbList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK-2.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK-2.jpg"
     ],
     "productName": "TWEED BOMBER JACKET BLACK",
     "productOption": null,
@@ -415,12 +398,11 @@
   },
   {
     "productId": 18,
-    "type": "women",
     "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/kumebrand.png",
     "tags": "패션, 의류, 하의, women",
     "detailList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/FRAYED+SEMI-WIDE+DENIM+PANTS+BLACK_MODEL-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/FRAYED+SEMI-WIDE+DENIM+PANTS+BLACK_MODEL-2.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/kume/FRAYED+SEMI-WIDE+DENIM+PANTS+BLACK_MODEL-2.jpg"
     ],
     "detailThumbList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/FRAYED+SEMI-WIDE+DENIM+PANTS+BLACK-1.jpg"
@@ -435,16 +417,15 @@
   },
   {
     "productId": 19,
-    "type": "women",
     "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/kumebrand.png",
     "tags": "패션, 의류, 하의, women",
     "detailList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/FRAYED+SEMI-WIDE+DENIM+PANTS+IVORY_MODEL-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/FRAYED+SEMI-WIDE+DENIM+PANTS+IVORY_MODEL-2.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/kume/FRAYED+SEMI-WIDE+DENIM+PANTS+IVORY_MODEL-2.jpg"
     ],
     "detailThumbList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/FRAYED+SEMI-WIDE+DENIM+PANTS+IVORY-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/FRAYED+SEMI-WIDE+DENIM+PANTS+IVORY-2.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/kume/FRAYED+SEMI-WIDE+DENIM+PANTS+IVORY-2.jpg"
     ],
     "productName": "FRAYED SEMI-WIDE DENIM PANTS IVORY",
     "productOption": null,
@@ -456,16 +437,15 @@
   },
   {
     "productId": 20,
-    "type": "women",
     "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/kumebrand.png",
     "tags": "패션, 의류, 상의, women",
     "detailList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/DOUBLE+POCKET+DENIM+BLOUSE+MEDIUM+BLUE_MODEL-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/DOUBLE+POCKET+DENIM+BLOUSE+MEDIUM+BLUE_MODEL-2.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/kume/DOUBLE+POCKET+DENIM+BLOUSE+MEDIUM+BLUE_MODEL-2.jpg"
     ],
     "detailThumbList": [
       "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/DOUBLE+POCKET+DENIM+BLOUSE+MEDIUM+BLUE-1.jpg",
-      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/DOUBLE+POCKET+DENIM+BLOUSE+MEDIUM+BLUE-2.jpg"
+      "\n         https://fianl.s3.ap-northeast-2.amazonaws.com/kume/DOUBLE+POCKET+DENIM+BLOUSE+MEDIUM+BLUE-2.jpg"
     ],
     "productName": "DOUBLE POCKET DENIM BLOUSE MEDIUM BLUE",
     "productOption": null,
