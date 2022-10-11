@@ -1,11 +1,12 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { baseQuery } from '../api/baseQuery'
 
 export const questionApi = createApi({
   reducerPath: 'questionApi',
-  // baseQuery,
-  baseQuery: fetchBaseQuery({
-    baseUrl: import.meta.env.VITE_BASE_URL2,
-  }),
+  baseQuery,
+  // baseQuery: fetchBaseQuery({
+  //   baseUrl: import.meta.env.VITE_BASE_URL2,
+  // }),
   endpoints: (builder) => ({
     //카드 상품 불러오기
     getQuestions: builder.query({
