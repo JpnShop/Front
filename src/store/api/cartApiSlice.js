@@ -1,9 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { baseQuery } from '../api/baseQuery'
-
-// import { apiSlice } from '../api/apiSlice'
-// const apiWithTags = apiSlice.enhanceEndpoints({ addTagTypes: ['Cart'] })
-
 // export const cartApiSlice = apiWithTags.injectEndpoints({
 export const cartApi = createApi({
   reducerPath: 'cartApi',

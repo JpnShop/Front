@@ -19,6 +19,7 @@ const index = () => {
     privateYn: false,
     password: null,
     images: [],
+    createdDate: null,
   })
   const [imageFile, setImageFile] = useState([])
   const [isOpen, ModalControlHandler] = useModalControl()

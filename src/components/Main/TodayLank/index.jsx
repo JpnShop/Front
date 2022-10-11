@@ -30,7 +30,7 @@ export const TodayLank = ({ category }) => {
       <div className="text-xl font-bold ml-5 mb-5">
         <span className="text-primary">오늘</span>의 랭크
       </div>
-      <div className="w-full grid grid-cols-2 border-t-2 border-primary">
+      <div className="w-full overflow-hidden grid grid-cols-2 border-t-2 border-primary">
         {list.map((user) => (
           <Card key={user.userId} data={user} />
         ))}

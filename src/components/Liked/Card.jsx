@@ -6,7 +6,7 @@ import check from '/public/assets/allCheck.svg'
 import notCheck from '/public/assets/allNotCheck.svg'
 
 function Card({ editMode, data, deleteList, setDeleteList }) {
-  const { brand, productName, image, price, sale } = data
+  const { brand, productName, thumbnail, price, sale } = data
   const saleCost = parseInt((price * (100 - sale)) / 100)
   const [selected, setSelected] = useState(false)
 
@@ -19,7 +19,7 @@ function Card({ editMode, data, deleteList, setDeleteList }) {
     <div>
       <div className="relative">
         <div className="w-full bg-cover overflow-hidden relative justify-center after:content('') after:block after:pb-[100%]">
-          <img src={image} alt="kirsh product" className="absolute" />
+          <img src={thumbnail} alt="kirsh product" className="absolute" />
         </div>
         <div>
           {editMode ? (

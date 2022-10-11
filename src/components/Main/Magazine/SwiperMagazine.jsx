@@ -31,11 +31,11 @@ const SwiperMagazine = ({ category }) => {
   }
 
   return (
-    <div className="flex overflow-x-scroll py-[39px] relative">
+    <div className="flex overflow-x-scroll py-[39px] relative px-5">
       {list.map((item, index) => (
         <div
           key={index}
-          className="relative ml-[40px]"
+          className="relative mx-5"
           //추후 id 값 넣기
           onClick={() => navigate(`/magazine/${item.id}`)}
         >

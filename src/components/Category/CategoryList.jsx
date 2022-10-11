@@ -1,4 +1,5 @@
 import React from 'react'
+import { useMemo } from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
@@ -13,10 +14,11 @@ function CategoryList({ topCG, subCG }) {
   const [subCategoryList, setSubCategoryList] = useState([])
   const [lastCategoryList, setLastSubCategoryList] = useState([])
   const userGender = useSelector((state) => state.user).gender
+  const setCategory = JSON.parse(JSON.stringify(CATEGORY))
 
   // 랜더링과 동시에 코트매틱 category에서 '브랜드' 리스트 삭제 (한번만 실행)
   useEffect(() => {
-    CATEGORY.map((top) => {
+    setCategory.map((top) => {
       if (top.TopCategory === '뷰티') {
         top.subCategory.map((sub) => {
           if (sub.name === '브랜드') {
@@ -30,13 +32,14 @@ function CategoryList({ topCG, subCG }) {
   // topCategory가 바뀌면 디폴트로 subCategory의 첫번째 요소 name이 active 상태가 되도록
   // sub카테고리가 바뀔때 last카테고리의 디폴트를 '전체'로
   useEffect(() => {
-    CATEGORY.map((top) => {
+    console.log(CATEGORY)
+    setCategory.map((top) => {
       if (selectTop === top.TopCategory) {
         setSubCategoryList(top.subCategory)
       }
     })
     setSelectLast('전체')
-  }, [selectSub])
+  }, [selectSub, userGender])
 
   // 패션 카테고리만 성별에 따라 바뀌므로
   useEffect(() => {

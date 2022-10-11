@@ -23,7 +23,7 @@ export const questionApi = createApi({
         // mode: 'cors',
         headers: {
           'Content-Type': 'multipart/form-data',
-          authorization: `Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiYXV0aCI6IlJPTEVfVVNFUiIsImV4cCI6MTY2NDk4MTgxMn0.RulW7VIPZJV4szYO-RpxYBdz8JevLATTxtmz5ePM6_habCD87zEIf0rnTFszib0zDgXptnTZ9CEEIq9ywDMUcQ`,
+          authorization: `Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyIiwiYXV0aCI6IlJPTEVfVVNFUiIsImV4cCI6MTY2NTQ4MDYwOH0.AIqxqJMQ9Sn40jm3mEHs5E8DTMIBEHnXKcE7qbMre8tPI3I14Kr4Qh5j3NM-SjBvrjIKRQ0FFi7jFDFlsC-QcQ`,
         },
         body: data,
       }),

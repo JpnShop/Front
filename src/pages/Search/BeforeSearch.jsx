@@ -1,19 +1,15 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import '~/animate.css'
 import Logo from '../../components/common/Logo'
 import { cls } from '../../utils'
 
-const BeforeSearch = () => {
+const BeforeSearch = ({ goSearch }) => {
+  const searchKeyword = 'searchKeyword'
+  const local = JSON.parse(window.localStorage.getItem(searchKeyword))
   const [animation, setAnimation] = useState('')
-  const [recentSearches, setRecentSearches] = useState([
-    '키르시',
-    '어라운드 앤',
-    '데일리백',
-    '숄더백',
-    '후드티',
-    '에뛰드',
-  ])
+  const [recentSearches, setRecentSearches] = useState(local)
   const [popularSearches, setPopularSearches] = useState([
     '키르시',
     '어라운드 앤',
@@ -26,37 +22,43 @@ const BeforeSearch = () => {
     '남자 가방',
     '아이쉐도우',
   ])
-  const [deleteSearchAnimation, setDeleteSearchAnimation] = useState('')
   const [deleteSearch, setDeleteSearch] = useState('')
   const [removeAllSearch, setRemoveAllSearch] = useState('')
+  const navigate = useNavigate()
 
   useEffect(() => {
-    // const local = localStorage.getItem('recentSearches')
-    // setRecentSearches(local)
     setAnimation('openSearchBar')
     setTimeout(() => {
       setAnimation('')
     }, 1000)
   }, [])
 
+  useEffect(() => {
+    setRecentSearches(JSON.parse(window.localStorage.getItem(searchKeyword)))
+  }, [goSearch, deleteSearch, removeAllSearch])
+
   const removeSearch = (item) => {
     setDeleteSearch(item)
-    setDeleteSearchAnimation('deleteSearch')
     setTimeout(() => {
-      setRecentSearches(recentSearches.filter((word) => word !== item))
+      window.localStorage.setItem(
+        searchKeyword,
+        JSON.stringify(recentSearches.filter((word) => word !== item)),
+      )
+      setDeleteSearch('')
     }, 500)
   }
+
   const removeAll = () => {
     setRemoveAllSearch('deleteSearch')
     setTimeout(() => {
-      setRecentSearches([])
+      window.localStorage.setItem(searchKeyword, JSON.stringify([]))
       setRemoveAllSearch('')
     }, 500)
   }
 
   return (
-    <div className={`${animation} w-full h-[calc(100vh-170px)] relative`}>
-      <div className="px-7 py-4 text-sm text-black-600">
+    <div className={`${animation} w-full`}>
+      <div className="h-72 px-7 mt-2 py-2 text-sm text-black-600">
         <div className="flex justify-between py-4">
           <div className="font-bold text-base text-black">최근 검색어</div>
           {recentSearches && recentSearches.length > 0 && (
@@ -75,7 +77,12 @@ const BeforeSearch = () => {
                   item === deleteSearch && 'deleteSearch',
                 )}
               >
-                <div className="font-medium py-1.5 truncate">{item}</div>
+                <div
+                  className="font-medium py-1.5 truncate"
+                  onClick={() => navigate(`${item}`)}
+                >
+                  {item}
+                </div>
                 <div
                   className="w-4 h-4 relative bg-white-100 rounded-full flex justify-center items-center"
                   onClick={() => removeSearch(item)}
@@ -95,7 +102,7 @@ const BeforeSearch = () => {
       </div>
 
       {popularSearches && popularSearches.length > 0 && (
-        <div className="w-full px-7 text-sm text-black-600 absolute bottom-0">
+        <div className="w-full px-7 text-sm text-black-600">
           <div className="font-bold text-base text-black py-6">인기 검색어</div>
           <ul className="grid grid-rows-5 grid-cols-2 grid-flow-col gap-2">
             {popularSearches.map((item, idx) => (

@@ -21,7 +21,7 @@ const index = () => {
   }
   const uploadedImage = useRef(null)
   const imageUploader = useRef(null)
-  
+
   const handleImageUpload = (e) => {
     const [file] = e.target.files
     if (file) {
@@ -61,15 +61,17 @@ const index = () => {
           </li>
         ))}
       </ul>
-      <div className="flex flex-col items-center justify-center py-[1.875rem] py-[1.875rem] mb-[1.875rem] border-b border-black-200 gap-4">
+      <div className="flex flex-col items-center justify-center py-[1.875rem] mb-[1.875rem] border-b border-black-200 gap-4">
         <p>상품에 대한 별점을 매겨주세요</p>
         <StarScore />
       </div>
-      <AddPicture handleImageUpload={handleImageUpload} uploadedImage={uploadedImage} imageUploader={imageUploader} />
+      <AddPicture
+        handleImageUpload={handleImageUpload}
+        uploadedImage={uploadedImage}
+        imageUploader={imageUploader}
+      />
       <Content count={count} onChangeHandler={onChangeHandler} />
-      <Button
-        classprop="text-sm mt-9 mb-5 bg-primary text-white"
-      >
+      <Button classprop="text-sm mt-9 mb-5 bg-primary text-white">
         등록하기
       </Button>
     </div>

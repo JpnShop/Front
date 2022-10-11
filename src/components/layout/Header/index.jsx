@@ -12,7 +12,7 @@ function Header(props) {
   return (
     <div
       className={cls(
-        'w-full h-16 flex fixed top-0 items-center bg-white z-40 box-border',
+        'w-full max-w-[600px] h-16 flex fixed top-0 items-center bg-white z-40 box-border',
         currentPath === '/' && 'border-b-2 border-primary',
       )}
     >

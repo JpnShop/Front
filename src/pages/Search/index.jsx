@@ -1,34 +1,17 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
+import { Outlet } from 'react-router-dom'
+import AfterSearch from './AfterSearch'
 import BeforeSearch from './BeforeSearch'
 import SearchHeader from './SearchHeader'
 
 function Search() {
-  const [focus, setFocus] = useState(false)
-  const [inputAnimation, setInputAnimation] = useState('')
-
-  useEffect(() => {
-    setFocus(true)
-    setInputAnimation('openSearchBar')
-    setTimeout(() => {
-      setInputAnimation('')
-    }, 1000)
-  }, [])
+  const [goSearch, setGoSearch] = useState(false)
 
   return (
     <div>
-      <SearchHeader
-        focus={focus}
-        setFocus={setFocus}
-        animation={inputAnimation}
-        setAnimation={setInputAnimation}
-      />
-      <BeforeSearch
-        focus={focus}
-        setFocus={setFocus}
-        animation={inputAnimation}
-        setAnimation={setInputAnimation}
-      />
+      <SearchHeader setGoSearch={setGoSearch} />
+      <Outlet goSearch={goSearch} />
     </div>
   )
 }

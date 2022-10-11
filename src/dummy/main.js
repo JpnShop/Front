@@ -102,13 +102,6 @@ export const magazineMan = [
   {
     id: 9,
     cover:
-      'https://search.pstatic.net/common/?url=http%3A%2F%2Fblogfiles.naver.net%2F20160830_49%2Ffelling790_1472532573961C6VEb_JPEG%2FErae_1016.jpg&type=sc960_832',
-    liked: true,
-    title: '매거진 이름', //추후 상품 디테일에서 쓰여요!
-  },
-  {
-    id: 10,
-    cover:
       'http://image.kyobobook.co.kr/images/book/large/027/l4910186251027.jpg',
     liked: true,
     title: '매거진 이름', //추후 상품 디테일에서 쓰여요!

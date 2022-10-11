@@ -35,7 +35,6 @@ const SwiperContainer = ({ category }) => {
         slidesPerView={'auto'}
         loop={true}
         spaceBetween={30}
-        slideToClickedSlide={true}
         className="w-full px-5 today"
       >
         {list.map((item) => (

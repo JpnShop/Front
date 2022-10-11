@@ -35,6 +35,8 @@ import Notice from './pages/Notice'
 import Faq from './pages/Faq'
 import CategoryFashion from './components/Category'
 import MainCategory from './pages/Category/MainCategory'
+import AfterSearch from './pages/Search/AfterSearch'
+import BeforeSearch from './pages/Search/BeforeSearch'
 import OrderMain from './pages/Order'
 import Order from './pages/Order/Order'
 import CompletedOrder from './pages/Order/CompletedOrder'
@@ -100,7 +102,8 @@ function App() {
           </Route>
           <Route path="/cart" element={<Cart />} />
           <Route path="/search" element={<Search />}>
-            <Route path=":search" />
+            <Route path="" element={<BeforeSearch />} />
+            <Route path=":search" element={<AfterSearch />} />
           </Route>
           <Route path="/order" element={<OrderMain />}>
             <Route path="" element={<Order />} />
