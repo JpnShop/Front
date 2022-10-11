@@ -9,16 +9,19 @@ export const producttApi = createApi({
   }),
   endpoints: (builder) => ({
     //카드 상품 불러오기
-    getWomenProducts: builder.query({
+    getProducts: builder.query({
       query: () => 'products',
-      transformResponse: (response) =>
-        response.filter((item) => item.type === 'women'),
     }),
-    getMenProducts: builder.query({
-      query: () => 'products',
-      transformResponse: (response) =>
-        response.filter((item) => item.type === 'men'),
-    }),
+    // getWomenProducts: builder.query({
+    //   query: () => 'products',
+    //   // transformResponse: (response) =>
+    //   //   response.filter((item) => item.type === 'women'),
+    // }),
+    // getMenProducts: builder.query({
+    //   query: () => 'products',
+    //   // transformResponse: (response) =>
+    //   //   response.filter((item) => item.type === 'men'),
+    // }),
   }),
 })
 

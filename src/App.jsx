@@ -45,7 +45,7 @@ import UserEditInfo from './pages/My/UserEditInfo'
 import Refund from './pages/My/Refund'
 import RefundListPage from './pages/My/Refund/RefundListPage'
 import RefundDetailPage from './pages/My/Refund/RefundDetailPage'
-import NotFoundPage from './pages/NotfoundPage'
+import NotFoundPage from './pages/NotFoundPage'
 
 function App() {
   const location = useLocation()

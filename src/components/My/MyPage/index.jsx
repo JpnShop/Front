@@ -16,7 +16,7 @@ const index = () => {
     <div>
       <Header />
       <div className="pt-16 pb-2">
-        {!token ? (
+        {token ? (
           <Guest />
         ) : (
           <>
