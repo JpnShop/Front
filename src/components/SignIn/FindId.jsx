@@ -26,7 +26,11 @@ const FindId = () => {
         throw findIdres.error
       }
     } catch (error) {
-      setTitle(error.data)
+      setTitle(
+        error.data ||
+          (isError && '서버에서 응답이 없습니다.') ||
+          '알 수 없는 에러가 발생했습니다',
+      )
       setIsOpen(true)
     }
   }
@@ -37,13 +41,18 @@ const FindId = () => {
     setTimeout(() => {
       EMAIL_REGEX.test(email)
         ? setAlret(null)
-        : setAlret('올바르지 않은 이메일입니다.')
+        : setAlret('올바르지 않은 형식입니다.')
     }, 500)
   }
 
   return (
     <div className="px-5 mt-[36px]">
-      <Email onChange={onChangeHandler} alret={alret} />
+      <Email
+        onChange={onChangeHandler}
+        alret={alret}
+        htmlFor={'email'}
+        title={'이메일'}
+      />
       <NextBtn onClick={onClick} disabled={EMAIL_REGEX.test(email)}>
         아이디 찾기
       </NextBtn>
