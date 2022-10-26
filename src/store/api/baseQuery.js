@@ -20,7 +20,7 @@ export const baseQuery = fetchBaseQuery({
 export const baseQueryWithReauth = async (args, api, extraOptions) => {
   let result = await baseQuery(args, api, extraOptions)
 
-  if (result?.error?.originalStatus === 401) {
+  if (result.error && result?.error?.status === 401) {
     console.log('sending refresh token')
     const refreshResult = await baseQuery(
       {
