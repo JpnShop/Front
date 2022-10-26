@@ -15,6 +15,8 @@ const Cart = ({ cartItems }) => {
       : setCheckedItems(checkedItems.concat(item))
   }
 
+  console.log(cartItems)
+
   return (
     <div className="pb-[80px]">
       <Header>
@@ -23,7 +25,7 @@ const Cart = ({ cartItems }) => {
       <div className="pt-[64px] ">
         <div className="flex justify-between px-5 my-[14px]">
           <div className="text-black-400 text-xs">
-            전체 {cartItems.length}개
+            전체 {cartItems?.length}개
           </div>
           <div className="text-point text-xs">선택 삭제</div>
         </div>
