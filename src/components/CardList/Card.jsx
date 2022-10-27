@@ -1,13 +1,33 @@
-import React from 'react'
+import React, { useMemo, useCallback } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { cls } from '../../utils'
 import heart from '/public/assets/heart-on.svg'
+import HeartIcon from '../common/HeartIcon'
+import {
+  useAddFavoriteItemMutation,
+  useDeleteFavoriteItemMutation,
+} from '../../store/api/favoriteApiSlice'
 
-function Card({ data, purchase }) {
+function Card({ data, purchase, favorites }) {
   const { brand, productName, thumbnail, price, sale } = data
   const saleCost = parseInt((price * (100 - sale)) / 100)
   const location = useLocation().pathname
   const navigate = useNavigate()
+  const [addFavoriteItem] = useAddFavoriteItemMutation()
+  const [deleteFavoriteItem] = useDeleteFavoriteItemMutation()
+  const isFavorite = useMemo(
+    () => favorites?.some((element) => element.productId === data.productId),
+    [favorites, data],
+  )
+  const onHeartClick = useCallback(
+    (e) => {
+      e.stopPropagation()
+      isFavorite
+        ? deleteFavoriteItem({ product_id: data.productId })
+        : addFavoriteItem({ product_id: data.productId })
+    },
+    [isFavorite, data],
+  )
 
   return (
     <div onClick={() => navigate(`/product/${data.productId}`)}>
@@ -16,8 +36,11 @@ function Card({ data, purchase }) {
           <img src={thumbnail} alt={productName} className="absolute" />
         </div>
         {!purchase && (
-          <div className="absolute w-[13%] max-w-[35px] top-2.5 right-2.5">
-            <img src={heart} alt="heart" />
+          <div
+            onClick={onHeartClick}
+            className="absolute w-[13%] max-w-[35px] top-2.5 right-2.5"
+          >
+            <HeartIcon off={!isFavorite} size="25px" />
           </div>
         )}
       </div>
