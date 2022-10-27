@@ -1,14 +1,18 @@
 import React from 'react'
 import Card from './Card'
 import NoList from './NoList'
+import {
+  useAddFavoriteItemMutation,
+  useDeleteFavoriteItemMutation,
+} from '../../store/api/favoriteApiSlice'
 
-function Container({ list, pt = 'pt-52' }) {
+function Container({ list, pt = 'pt-52', favorites }) {
   return (
     <div className={`${pt}`}>
       {list && list.length > 0 ? (
         <div className="w-full grid grid-cols-2 gap-[2px]">
           {list.map((item, idx) => (
-            <Card key={idx} data={item} />
+            <Card key={idx} data={item} favorites={favorites} />
           ))}
         </div>
       ) : (
