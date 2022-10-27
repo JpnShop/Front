@@ -24,7 +24,6 @@ const Detail = () => {
   const [kakaoShare, setKakaoShare] = useState(false)
   const recentViewProduct = 'recentViewProduct'
   const { data: favorites } = useGetFavoriteItemsQuery()
-  favorites && console.log('favorites', favorites)
 
   useEffect(() => {
     // 카카오 sdk 추가
@@ -73,7 +72,7 @@ const Detail = () => {
         list && (
           <div className="relative mb-10">
             <MainSlide list={list.detailThumbList} />
-            <Explanation list={list} />
+            <Explanation list={list} favorites={favorites} />
             <Brand list={list} />
 
             <DetailDesc list={list.detailList} />

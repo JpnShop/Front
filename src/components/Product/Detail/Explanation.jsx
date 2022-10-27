@@ -1,18 +1,30 @@
-import React, { useState } from 'react'
+import React, { useMemo, useCallback } from 'react'
 import { useParams } from 'react-router-dom'
 import HeartIcon from '../../common/HeartIcon'
 import Coupon from '../../common/Coupon'
 import { ReactComponent as GoBackIcon } from '/public/assets/back-on.svg'
 import { ratingStar } from '../../../utils/star'
 import { useGetProductReviewsCountQuery } from '../../../store/api/reviewApiSlice'
-const Explanation = ({ list }) => {
-  const [open, setOpen] = useState(false)
-  const toggleBtn = () => {
-    setOpen((prev) => !prev)
-  }
-  //리뷰호출
+import {
+  useAddFavoriteItemMutation,
+  useDeleteFavoriteItemMutation,
+} from '../../../store/api/favoriteApiSlice'
+
+const Explanation = ({ list, favorites }) => {
   const { brand, productName, price, sale, star } = list
   const params = useParams()
+  const [addFavoriteItem] = useAddFavoriteItemMutation()
+  const [deleteFavoriteItem] = useDeleteFavoriteItemMutation()
+  const isFavorite = useMemo(
+    () => favorites?.some((element) => element.productId === list.productId),
+    [favorites, list],
+  )
+  const onHeartClick = useCallback(() => {
+    console.log('클릭')
+    isFavorite
+      ? deleteFavoriteItem({ product_id: list.productId })
+      : addFavoriteItem({ product_id: list.productId })
+  }, [isFavorite, list])
   const { data: questionCount } = useGetProductReviewsCountQuery(params.id)
   return (
     <div className="w-full flex-1 mt-5 pb-2">
@@ -22,7 +34,9 @@ const Explanation = ({ list }) => {
             <span className="text-color-800 text-sm font-bold">{brand}</span>
             <GoBackIcon className="rotate-180 w-[14px] h-[14px]" />
           </div>
-          <HeartIcon size="22px" />
+          <div onClick={onHeartClick}>
+            <HeartIcon off={!isFavorite} size="22px" />
+          </div>
         </div>
         <h2 className="mt-5 font-bold">{productName}</h2>
         <div className="flex items-center my-3">
