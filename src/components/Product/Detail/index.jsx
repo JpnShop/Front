@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { useGetProductQuery } from '../../../store/api/productApiSlice'
-import { useGetFavoriteItemsQuery } from '../../../store/api/favoriteApiSlice'
+import {
+  useGetFavoriteItemsQuery,
+  useAddFavoriteItemMutation,
+  useDeleteFavoriteItemMutation,
+} from '../../../store/api/favoriteApiSlice'
 import MainSlide from './MainSlide'
 import Explanation from './Explanation'
 import DetailDesc from './DetailDesc'
@@ -19,6 +23,8 @@ const Detail = () => {
   const { data: list, isLoading, isError } = useGetProductQuery(id)
   const [kakaoShare, setKakaoShare] = useState(false)
   const recentViewProduct = 'recentViewProduct'
+  const { data: favorites } = useGetFavoriteItemsQuery()
+  favorites && console.log('favorites', favorites)
 
   useEffect(() => {
     // 카카오 sdk 추가

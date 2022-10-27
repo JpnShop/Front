@@ -1,25 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HeartIcon from '../../common/HeartIcon'
 import cart from '/public/assets/bag-black.svg'
 import { useNavigate } from 'react-router-dom'
 import { cls } from '../../../utils'
 
 const Card = ({ product, active }) => {
-  const {
-    detailThumbList,
-    thumbnail,
-    productName,
-    sale,
-    price,
-    liked,
-    productId,
-  } = product
+  const { detailThumbList, thumbnail, productName, sale, price, productId } =
+    product
+  const [favorite, setFavorite] = useState(product?.liked ? true : false)
   const navigate = useNavigate()
+  const onClick = (e) => {
+    e.stopPropagation()
+    setFavorite((prev) => !prev)
+  }
+  const goDetailPage = (e) => {
+    navigate(`/product/${productId}`)
+  }
   return (
-    <div
-      className="w-[230px] h-80 mb-24"
-      onClick={() => navigate(`/product/${productId}`)}
-    >
+    <div className="w-[230px] h-80 mb-24" onClick={goDetailPage}>
       <div
         className={cls(
           'w-[230px] h-[230px] bg-cover bg-center rounded-full overflow-hidden',
@@ -38,7 +36,9 @@ const Card = ({ product, active }) => {
         </div>
         {active ? (
           <div className="absolute flex right-1 bottom-0 gap-3">
-            <HeartIcon size="25" off={liked} fill={'#000'} />
+            <div onClick={onClick}>
+              <HeartIcon size="25" off={favorite} fill={'#000'} />
+            </div>
             <img src={cart} alt="cart" width="25" hegiht="25" />
           </div>
         ) : null}
