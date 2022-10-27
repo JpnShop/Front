@@ -1,10 +1,12 @@
 import React from 'react'
 import { detailProducts } from '../../../dummy/detail'
-import HeartIcon from '../../common/HeartIcon'
 import { useGetProductsQuery } from '../../../store/api/productApiSlice'
+import { useGetFavoriteItemsQuery } from '../../../store/api/favoriteApiSlice'
+import SimiliarCard from './SimiliarCard'
 
 const Similiar = ({ tag }) => {
   const { data } = useGetProductsQuery()
+  const { data: favoriteList } = useGetFavoriteItemsQuery()
   let items
   items = data
     ?.filter((item) => item.tags.includes(tag[3]))
@@ -19,32 +21,7 @@ const Similiar = ({ tag }) => {
       <div className="flex gap-5 overflow-x-scroll">
         {items ? (
           items?.map((item, idx) => (
-            <div key={idx}>
-              <div
-                className="w-[130px] h-[131px] bg-cover"
-                style={{
-                  backgroundImage: `url(${item.thumbnail})`,
-                }}
-              ></div>
-              <div className="flex justify-between items-center mt-1 px-2">
-                <span className="text-sm font-bold truncate overflow-ellipsis w-[130px]">
-                  {item.brand}
-                </span>
-                <HeartIcon size="15" off={item.liked} />
-              </div>
-              <div className=" overflow-ellipsis text-[10px] text-black-800 truncate w-[125px] px-2 mt-2">
-                {item.productName}
-              </div>
-              <div className="px-2 flex justify-between items-center border-b border-primary pb-2">
-                <span className="text-primary text-sm">{item.sale} %</span>
-                <span className="text-sm">
-                  {parseInt(
-                    (item.price * (100 - item.sale)) / 100,
-                  ).toLocaleString()}{' '}
-                  ¥
-                </span>
-              </div>
-            </div>
+            <SimiliarCard item={item} favorites={favoriteList} key={idx} />
           ))
         ) : (
           <div className="px-5 text-xs text-black-600">

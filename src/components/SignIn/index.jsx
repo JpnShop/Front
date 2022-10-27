@@ -1,7 +1,5 @@
 import { useState, useMemo } from 'react'
 import GoogleBtn from './GoogleBtn'
-// import { ReactComponent as GooGleIcon } from '/public/assets/google.svg'
-// import { ReactComponent as LineIcon } from '/public/assets/line.svg'
 import { useLoginMutation } from '../../store/api/authApiSlice'
 import { setCredentials } from '../../store/slices/authSlice'
 import { useDispatch } from 'react-redux'

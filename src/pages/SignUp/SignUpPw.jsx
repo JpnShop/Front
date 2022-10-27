@@ -19,7 +19,7 @@ const SignUpPw = () => {
   })
   const [alret, setAlret] = useState({
     pw: null,
-    pwCheck: '',
+    pwCheck: null,
   })
   const onBlurHandler = (name) => {
     setActive(false)
@@ -55,7 +55,7 @@ const SignUpPw = () => {
       inputValue.pw === inputValue.pwCheck
         ? setAlret({
             ...alret,
-            pwCheck: '',
+            pwCheck: null,
           })
         : setAlret({
             ...alret,
@@ -125,7 +125,7 @@ const SignUpPw = () => {
       <NextBtn
         next="infoform"
         inputValue={inputValue}
-        disabled={inputValue.pw === inputValue.pwCheck}
+        disabled={inputValue.pwCheck && !alret.pwCheck}
       >
         다음
       </NextBtn>
