@@ -19,6 +19,9 @@ export const authApiSlice = apiSlice.injectEndpoints({
     checkEmail: builder.query({
       query: (email) => `/checkEmail/${email}`,
     }),
+    checkUsername: builder.query({
+      query: (userName) => `/checkUsername/${userName}`,
+    }),
     findID: builder.mutation({
       query: (credentials) => ({
         url: '/sendUsername',
@@ -42,4 +45,5 @@ export const {
   useFindIDMutation,
   useFindPWMutation,
   useCheckEmailQuery,
+  useCheckUsernameQuery,
 } = authApiSlice
