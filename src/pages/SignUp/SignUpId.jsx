@@ -4,15 +4,12 @@ import Title from '../../components/SignUp/Title'
 import NextBtn from '../../components/common/NextBtn'
 import { ReactComponent as ClearIcon } from '/public/assets/clear.svg'
 import useInputValue from '../../hook/useInputValue'
-import { useCheckEmailMutation } from '../../store/api/authApiSlice'
 const ID_REGEX = new RegExp('^[a-z0-9_-]{6,11}$')
 
 const SignUpIdForm = () => {
   const [inputValue, setInputValue] = useState('')
-  const [alret, setAlret] = useState('')
-  const [disabled, setDisabled] = useState(false)
+  const [alret, setAlret] = useState(null)
   const [active, setActive, onFocusHandler] = useInputValue()
-  const [checkEmail] = useCheckEmailMutation()
   const onBlurHandler = (e) => {
     setActive(false)
     setInputValue('')
@@ -23,12 +20,12 @@ const SignUpIdForm = () => {
   }
 
   const doubleCheck = () => {
-    checkEmail(inputValue)
+    // checkEmail(inputValue)
   }
 
   const checkRegex = () => {
     ID_REGEX.test(inputValue)
-      ? setDisabled(true)
+      ? setAlret(null)
       : setAlret('6~11자의 영문 소문자와 숫자만 사용가능합니다.')
   }
 
@@ -71,7 +68,11 @@ const SignUpIdForm = () => {
         >
           중복확인
         </Button>
-        <NextBtn next="pwform" inputValue={inputValue} disabled={disabled}>
+        <NextBtn
+          next="pwform"
+          inputValue={inputValue}
+          disabled={inputValue && !alret}
+        >
           다음
         </NextBtn>
       </div>

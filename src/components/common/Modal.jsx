@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Modal = ({ title, onClick, children }) => {
+const Modal = ({ title, onClick, children, className }) => {
   return (
     <>
       <div
@@ -24,7 +24,7 @@ const Modal = ({ title, onClick, children }) => {
           ></path>
         </svg>
         <div className="flex flex-col items-center gap-5">
-          <h3 className="w-full px-5 text-center">{title}</h3>
+          <h3 className={`w-full px-5 text-center ${className}`}>{title}</h3>
           <div>
             <div
               className="border border-black-200 px-3 py-1 rounded"
