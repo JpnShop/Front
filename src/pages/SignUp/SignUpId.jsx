@@ -4,23 +4,25 @@ import Title from '../../components/SignUp/Title'
 import NextBtn from '../../components/common/NextBtn'
 import { ReactComponent as ClearIcon } from '/public/assets/clear.svg'
 import useInputValue from '../../hook/useInputValue'
+import { useCheckUsernameQuery } from '../../store/api/authApiSlice'
 const ID_REGEX = new RegExp('^[a-z0-9_-]{6,11}$')
 
 const SignUpIdForm = () => {
-  const [inputValue, setInputValue] = useState('')
+  const [inputValue, setInputValue] = useState(null)
+  const [isCheckUsername, setIsCheckUsername] = useState(false)
   const [alret, setAlret] = useState(null)
   const [active, setActive, onFocusHandler] = useInputValue()
-  const onBlurHandler = (e) => {
-    setActive(false)
-    setInputValue('')
-  }
+  const { error, isError } = useCheckUsernameQuery(inputValue, {
+    skip: !inputValue && !alret,
+  })
 
   const ChangeHandler = (e) => {
     setInputValue(e.target.value)
   }
 
   const doubleCheck = () => {
-    // checkEmail(inputValue)
+    if (alret) return
+    setIsCheckUsername((prev) => !prev)
   }
 
   const checkRegex = () => {
@@ -44,7 +46,7 @@ const SignUpIdForm = () => {
         </label>
         <div className="relative  flex box-border h-[50px] border border-neutral-200 rounded justify-between items-center">
           <input
-            value={inputValue['id']}
+            value={inputValue}
             onChange={ChangeHandler}
             onClick={() => onFocusHandler}
             onBlur={checkRegex}
@@ -62,6 +64,15 @@ const SignUpIdForm = () => {
           </div>
         </div>
         <p className="mt-[8px] font-[11px] text-red-600 text-[12px]">{alret}</p>
+        {isCheckUsername && (
+          <p className="mt-[8px] font-[11px] text-red-600 text-[12px]">
+            {isError && error.status === 500
+              ? error.data?.msg
+              : error?.data
+              ? error.data
+              : null}
+          </p>
+        )}
         <Button
           classprop=" border border-black-100 mt-6 gap-2"
           onClick={doubleCheck}
@@ -71,7 +82,7 @@ const SignUpIdForm = () => {
         <NextBtn
           next="pwform"
           inputValue={inputValue}
-          disabled={inputValue && !alret}
+          disabled={inputValue && !alret && isError && error.status !== 500}
         >
           다음
         </NextBtn>

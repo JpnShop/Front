@@ -31,7 +31,7 @@ const UserInfo = () => {
     city: null,
     street: null,
   })
-  const data = useCheckEmailQuery(inputValue.email, {
+  const { error, isError: ErrorStatus } = useCheckEmailQuery(inputValue.email, {
     skip: inputValue.email && !alret.email && alret.email,
   })
   const [disabled, setDisabled] = useState(false)
@@ -176,14 +176,16 @@ const UserInfo = () => {
               <Modal
                 onClick={duplicateHandler}
                 title={
-                  data.status == 'rejected' && data.error.data.status === 500
-                    ? data.error.data.msg
-                    : data.error.data
+                  ErrorStatus && error.status === 500
+                    ? error.data?.msg
+                    : error?.data
+                    ? error.data
+                    : null
                 }
                 className={cls(
-                  data.status == 'rejected' &&
-                    data.error.data.status === 500 &&
-                    data.error.data.msg &&
+                  ErrorStatus &&
+                    error.data.status === 500 &&
+                    error.data?.msg &&
                     'text-red-600',
                 )}
               />
@@ -353,7 +355,9 @@ const UserInfo = () => {
           next="finish"
           inputValue={inputValue}
           disabled={
-            disabled && data.error?.data === '사용 가능한 이메일입니다.'
+            disabled &&
+            error?.data &&
+            error?.data === '사용 가능한 이메일입니다.'
           }
         >
           다음

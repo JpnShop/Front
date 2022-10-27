@@ -1,0 +1,18 @@
+{
+  "status": "rejected",
+  "endpointName": "checkUsername",
+  "requestId": "UwBqKzDE6PFrkiV-mGjQt",
+  "originalArgs": "hahahololo",
+  "startedTimeStamp": 1666893498964,
+  "error": {
+    "status": "PARSING_ERROR",
+    "originalStatus": 200,
+    "data": "사용 가능한 아이디입니다.",
+    "error": "SyntaxError: Unexpected token '사', \"사용 가능한 아이디입니다.\" is not valid JSON"
+  },
+  "isUninitialized": false,
+  "isLoading": false,
+  "isSuccess": false,
+  "isError": true,
+  "isFetching": false
+}
