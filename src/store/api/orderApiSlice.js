@@ -22,7 +22,14 @@ export const orderApi = apiSlice.injectEndpoints({
         }
       },
     }),
+    getUserInfo: builder.query({
+      query: () => 'orders',
+    }),
   }),
 })
 
-export const { useAddOrdersMutation, useGuestAddInfoMutation } = orderApi
+export const {
+  useAddOrdersMutation,
+  useGuestAddInfoMutation,
+  useGetUserInfoQuery,
+} = orderApi

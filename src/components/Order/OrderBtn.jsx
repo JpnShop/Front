@@ -3,7 +3,7 @@ import { cls } from '../../utils'
 import { useNavigate } from 'react-router-dom'
 import { useAddOrdersMutation } from '../../store/api/orderApiSlice'
 
-const OrderBtn = ({ items, select }) => {
+const OrderBtn = ({ items, paymathod }) => {
   const navigate = useNavigate()
   const [addOrders] = useAddOrdersMutation()
   const products = items.map((item) => {
@@ -14,7 +14,7 @@ const OrderBtn = ({ items, select }) => {
   })
   const [product] = products
   const paynowHandler = (id) => {
-    addOrders({ ...product, select })
+    addOrders({ ...product, paymathod })
     navigate('/order/completed', { state: items })
   }
   const [item] = items

@@ -7,6 +7,7 @@ import { useLocation } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { resetInfo, changeInfo } from '../../store/slices/shippingInfoSlice'
 import { useGuestAddInfoMutation } from '../../store/api/orderApiSlice'
+import { useGetUserInfoQuery } from '../../store/api/orderApiSlice'
 import { useCookies } from 'react-cookie'
 
 const ShippingInfo = () => {
@@ -19,6 +20,8 @@ const ShippingInfo = () => {
   }
   const data = useSelector((state) => state.shippingInfo)
   const [guestAddInfo] = useGuestAddInfoMutation()
+  const { data: result } = useGetUserInfoQuery()
+  result && console.log('result', result)
   const saveShippinInfo = async () => {
     try {
       const response = await guestAddInfo({

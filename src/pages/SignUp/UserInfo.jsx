@@ -57,10 +57,11 @@ const UserInfo = () => {
         furiganaFirst: inputValue.furiganaFirst,
         furiganaLast: inputValue.furiganaLast,
       })
-      if (signupHandler?.error.status === 500) {
+      if (signupHandler?.error?.status === 500) {
         return alert('서버에러가 발생했습니다.')
+      } else {
+        navigate('/signup/finish')
       }
-      navigate('/signup/finish')
     } catch (error) {
       alert(error.data.msg)
     } finally {
