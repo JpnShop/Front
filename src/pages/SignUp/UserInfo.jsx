@@ -9,6 +9,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { resetInfo, changeInfo } from '../../store/slices/shippingInfoSlice'
 import ErrorCom from '../../components/common/ErrorCom'
 import Loader from '../../components/layout/Loader'
+import { useCheckEmailQuery } from '../../store/api/authApiSlice'
+import Modal from '../../components/common/Modal'
+import { cls } from '../../utils'
 const EMAIL_REGEX =
   /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/
 
@@ -28,15 +31,17 @@ const UserInfo = () => {
     city: null,
     street: null,
   })
-
+  const data = useCheckEmailQuery(inputValue.email, {
+    skip: inputValue.email && !alret.email && alret.email,
+  })
   const [disabled, setDisabled] = useState(false)
   const [openPost, setOpenPost] = useState(false)
   const [animation, setAnimation] = useState('')
+  const [modalIsOpen, setModalIsOpen] = useState(false)
   const navigate = useNavigate()
-
   const onClick = async () => {
     try {
-      await signup({
+      const signupHandler = await signup({
         username: state.id,
         password: state.pw,
         email: inputValue.email,
@@ -52,10 +57,13 @@ const UserInfo = () => {
         furiganaFirst: inputValue.furiganaFirst,
         furiganaLast: inputValue.furiganaLast,
       })
+      if (signupHandler?.error.status === 500) {
+        return alert('서버에러가 발생했습니다.')
+      }
+      navigate('/signup/finish')
     } catch (error) {
       alert(error.data.msg)
     } finally {
-      navigate('/signup/finish')
       dispatch(resetInfo())
     }
   }
@@ -118,6 +126,16 @@ const UserInfo = () => {
       setDisabled(true)
   }, [alret])
 
+  const duplicateHandler = () => {
+    if (!modalIsOpen && inputValue.email === '') return
+    if (alret.email !== '') return
+    setModalIsOpen((prev) => !prev)
+  }
+
+  useEffect(() => {
+    console.log(modalIsOpen)
+  }, [modalIsOpen])
+
   if (isError)
     return <ErrorCom Contents={'회원가입에 실패했습니다 다시 시도해 주세요'} />
   if (isLoading) return <Loader />
@@ -143,13 +161,32 @@ const UserInfo = () => {
                 placeholder="이메일을 입력해주세요."
                 className="px-3 border-none h-[3rem] flex-initial box-border w-full py-[0.75rem] rounded text-[0.875rem] transition shadow-white"
               />
-              <button className="absolute right-[0.625rem] w-[5.438rem] h-[1.563rem] text-xs border border-primary text-primary rounded font-medium">
+              <button
+                className="absolute right-[0.625rem] w-[5.438rem] h-[1.563rem] text-xs border border-primary text-primary rounded font-medium"
+                onClick={duplicateHandler}
+              >
                 중복확인
               </button>
             </div>
             <p className="mt-[8px] font-[11px] text-red-600 text-[12px]">
               {alret.email}
             </p>
+            {modalIsOpen && (
+              <Modal
+                onClick={duplicateHandler}
+                title={
+                  data.status == 'rejected' && data.error.data.status === 500
+                    ? data.error.data.msg
+                    : data.error.data
+                }
+                className={cls(
+                  data.status == 'rejected' &&
+                    data.error.data.status === 500 &&
+                    data.error.data.msg &&
+                    'text-red-600',
+                )}
+              />
+            )}
           </>
         )}
         <div>
@@ -314,7 +351,9 @@ const UserInfo = () => {
           onClick={onClick}
           next="finish"
           inputValue={inputValue}
-          disabled={disabled}
+          disabled={
+            disabled && data.error?.data === '사용 가능한 이메일입니다.'
+          }
         >
           다음
         </NextBtn>
