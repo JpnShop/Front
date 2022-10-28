@@ -3,16 +3,22 @@ import Header from '../layout/Header'
 import CartItem from './CartItem'
 import Total from './Total'
 import CartBtn from './CartBtn'
+import { useDeleteCartItemMutation } from '../../store/api/cartApiSlice'
 import { useNavigate } from 'react-router-dom'
 
 const Cart = ({ cartItems }) => {
   const [checkedItems, setCheckedItems] = useState(cartItems)
   const navigate = useNavigate()
+  const [deleteCartItem] = useDeleteCartItemMutation()
 
   const onCheckedHandler = (item) => {
     checkedItems.includes(item)
       ? setCheckedItems(checkedItems.filter((product) => product !== item))
       : setCheckedItems(checkedItems.concat(item))
+  }
+
+  const deleteSeleteItem = () => {
+    checkedItems.map((item) => deleteCartItem({ product_id: item.productId }))
   }
 
   useEffect(() => {
@@ -29,7 +35,9 @@ const Cart = ({ cartItems }) => {
           <div className="text-black-400 text-xs">
             전체 {cartItems?.length}개
           </div>
-          <div className="text-point text-xs">선택 삭제</div>
+          <div className="text-point text-xs" onClick={deleteSeleteItem}>
+            선택 삭제
+          </div>
         </div>
         {cartItems?.length === 0 && (
           <div className="px-5">
