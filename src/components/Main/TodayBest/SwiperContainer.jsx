@@ -10,16 +10,22 @@ import {
   lifeBestList,
   koreaBestList,
 } from '../../../dummy/main'
+import { useGetFavoriteItemsQuery } from '../../../store/api/favoriteApiSlice'
 
 const SwiperContainer = ({ category }) => {
   const { data } = useGetProductsQuery()
+  const { data: favoriteList } = useGetFavoriteItemsQuery()
   let list
   switch (category) {
     case '우먼':
-      list = data.filter((item) => item.tags.includes('women'))
+      list = data
+        ? data?.filter((item) => item.tags.includes('women'))
+        : womanBestList
       break
     case '맨':
-      list = data.filter((item) => item.tags.includes('men'))
+      list = data
+        ? data?.filter((item) => item.tags.includes('men'))
+        : manBestList
       break
     case '라이프':
       list = lifeBestList
@@ -39,9 +45,15 @@ const SwiperContainer = ({ category }) => {
         spaceBetween={30}
         className="w-full px-5 today"
       >
-        {list.map((item) => (
+        {list?.map((item) => (
           <SwiperSlide key={item.productId}>
-            {({ isActive }) => <Card product={item} active={isActive}></Card>}
+            {({ isActive }) => (
+              <Card
+                product={item}
+                active={isActive}
+                favorites={favoriteList}
+              ></Card>
+            )}
           </SwiperSlide>
         ))}
       </Swiper>
