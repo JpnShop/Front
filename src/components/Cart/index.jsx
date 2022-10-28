@@ -15,7 +15,9 @@ const Cart = ({ cartItems }) => {
       : setCheckedItems(checkedItems.concat(item))
   }
 
-  console.log(cartItems)
+  useEffect(() => {
+    setCheckedItems(cartItems)
+  }, [cartItems])
 
   return (
     <div className="pb-[80px]">
