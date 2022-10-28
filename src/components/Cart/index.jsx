@@ -17,8 +17,10 @@ const Cart = ({ cartItems }) => {
       : setCheckedItems(checkedItems.concat(item))
   }
 
-  const deleteSeleteItem = () => {
-    checkedItems.map((item) => deleteCartItem({ product_id: item.productId }))
+  const deleteSeleteItem = async () => {
+    await checkedItems.map((item) =>
+      deleteCartItem({ product_id: item.productId }),
+    )
   }
 
   useEffect(() => {

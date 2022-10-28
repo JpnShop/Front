@@ -19,12 +19,15 @@ const Explanation = ({ list, favorites }) => {
     () => favorites?.some((element) => element.productId === list.productId),
     [favorites, list],
   )
-  const onHeartClick = useCallback(() => {
-    console.log('클릭')
-    isFavorite
-      ? deleteFavoriteItem({ product_id: list.productId })
-      : addFavoriteItem({ product_id: list.productId })
-  }, [isFavorite, list])
+  const onHeartClick = useCallback(
+    (e) => {
+      e.stopPropagation()
+      isFavorite
+        ? deleteFavoriteItem({ product_id: list.productId })
+        : addFavoriteItem({ product_id: list.productId })
+    },
+    [isFavorite, list],
+  )
   const { data: questionCount } = useGetProductReviewsCountQuery(params.id)
   return (
     <div className="w-full flex-1 mt-5 pb-2">

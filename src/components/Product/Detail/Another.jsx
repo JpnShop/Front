@@ -22,10 +22,7 @@ const Another = () => {
       </div>
       <div className="flex gap-5 overflow-x-scroll">
         {list?.map((item) => (
-          <div
-            key={item.productId}
-            onClick={() => navigate(`/product/${productId}`)}
-          >
+          <div key={item.productId}>
             <AnotherCard item={item} favorites={favoriteList} />
           </div>
         ))}
