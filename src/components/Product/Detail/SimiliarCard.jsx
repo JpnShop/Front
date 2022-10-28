@@ -9,8 +9,12 @@ import { useDispatch } from 'react-redux'
 import { changeFavoriteItems } from '../../../store/slices/favoriteSlice'
 
 const SimiliarCard = ({ item, favorites, token }) => {
-  const [addFavoriteItem] = useAddFavoriteItemMutation()
-  const [deleteFavoriteItem] = useDeleteFavoriteItemMutation()
+  const [addFavoriteItem] = useAddFavoriteItemMutation(undefined, {
+    skip: !token,
+  })
+  const [deleteFavoriteItem] = useDeleteFavoriteItemMutation(undefined, {
+    skip: !token,
+  })
   const isFavorite = useMemo(
     () => favorites?.some((element) => element.productId === item.productId),
     [favorites, item],

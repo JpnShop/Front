@@ -18,7 +18,9 @@ const SwiperContainer = ({ category }) => {
   const [cookies, setCookie, removeCookie] = useCookies()
   const token = cookies.accessToken
   const { data } = useGetProductsQuery()
-  const { data: favoriteList } = useGetFavoriteItemsQuery()
+  const { data: favoriteList } = useGetFavoriteItemsQuery(undefined, {
+    skip: !token,
+  })
   const favriteItems = useSelector((state) => state.favorites)
 
   let list

@@ -20,8 +20,12 @@ const Card = ({ product, active, favorites, token }) => {
     navigate(`/product/${productId}`)
   }
   const [addCartItem] = useAddCartItemMutation()
-  const [addFavoriteItem] = useAddFavoriteItemMutation()
-  const [deleteFavoriteItem] = useDeleteFavoriteItemMutation()
+  const [addFavoriteItem] = useAddFavoriteItemMutation(undefined, {
+    skip: !token,
+  })
+  const [deleteFavoriteItem] = useDeleteFavoriteItemMutation(undefined, {
+    skip: !token,
+  })
   const isFavorite = useMemo(
     () => favorites?.some((element) => element.productId === product.productId),
     [favorites, product],

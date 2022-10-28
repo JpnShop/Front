@@ -28,7 +28,9 @@ const Detail = () => {
   const { data: list, isLoading, isError } = useGetProductQuery(id)
   const [kakaoShare, setKakaoShare] = useState(false)
   const recentViewProduct = 'recentViewProduct'
-  const { data: favorites } = useGetFavoriteItemsQuery()
+  const { data: favorites } = useGetFavoriteItemsQuery(undefined, {
+    skip: !token,
+  })
 
   useEffect(() => {
     // 카카오 sdk 추가

@@ -11,9 +11,11 @@ import { useSelector } from 'react-redux'
 const Another = () => {
   const params = useParams()
   const { data } = useGetProductQuery(params.id)
-  const { data: favoriteList } = useGetFavoriteItemsQuery()
   const [cookies, setCookie, removeCookie] = useCookies()
   const token = cookies.accessToken
+  const { data: favoriteList } = useGetFavoriteItemsQuery(undefined, {
+    skip: !token,
+  })
   const favriteItems = useSelector((state) => state.favorites)
   const { data: datas } = useGetProductsQuery()
   const list = datas?.filter((item) => item.brand === data.brand)

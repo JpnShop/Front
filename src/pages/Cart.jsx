@@ -11,7 +11,9 @@ const Cart = () => {
   const [cookies, setCookie, removeCookie] = useCookies()
   const token = cookies.accessToken
   const cartItems = useSelector((state) => state.cart)
-  const { data, isLoading, isError, isSuccess } = useGetCartItemsQuery()
+  const { data, isLoading, isError, isSuccess } = useGetCartItemsQuery({
+    skip: !token,
+  })
 
   return (
     <>

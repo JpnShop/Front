@@ -16,8 +16,12 @@ const Explanation = ({ list, favorites, token }) => {
   const { brand, productName, price, sale, star } = list
   const dispatch = useDispatch()
   const params = useParams()
-  const [addFavoriteItem] = useAddFavoriteItemMutation()
-  const [deleteFavoriteItem] = useDeleteFavoriteItemMutation()
+  const [addFavoriteItem] = useAddFavoriteItemMutation(undefined, {
+    skip: !token,
+  })
+  const [deleteFavoriteItem] = useDeleteFavoriteItemMutation(undefined, {
+    skip: !token,
+  })
   const isFavorite = useMemo(
     () => favorites?.some((element) => element.productId === list.productId),
     [favorites, list],

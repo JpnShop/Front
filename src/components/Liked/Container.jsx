@@ -1,14 +1,11 @@
 import React, { useState } from 'react'
 import Card from './Card'
-// import { likedList } from '~/dummy/liked'
-import { useGetFavoriteItemsQuery } from '../../store/api/favoriteApiSlice'
 import Button from '../common/Button'
 import NoList from '../CardList/NoList'
 
-function Container() {
+function Container({ likedList }) {
   const [edit, setEdit] = useState(false)
   const [deleteList, setDeleteList] = useState([])
-  const { data: likedList, isLoading, isError } = useGetFavoriteItemsQuery()
 
   return (
     <div className="pt-28">

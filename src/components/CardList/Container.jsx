@@ -8,7 +8,9 @@ import { useCookies } from 'react-cookie'
 function Container({ list, pt = 'pt-52' }) {
   const [cookies, setCookie, removeCookie] = useCookies()
   const token = cookies.accessToken
-  const { data: favorites } = useGetFavoriteItemsQuery()
+  const { data: favorites } = useGetFavoriteItemsQuery(undefined, {
+    skip: !token,
+  })
   const favriteItems = useSelector((state) => state.favorites)
 
   return (

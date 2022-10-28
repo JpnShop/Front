@@ -10,9 +10,10 @@ const Similiar = ({ tag }) => {
   const [cookies, setCookie, removeCookie] = useCookies()
   const token = cookies.accessToken
   const favriteItems = useSelector((state) => state.favorites)
-
   const { data } = useGetProductsQuery()
-  const { data: favoriteList } = useGetFavoriteItemsQuery()
+  const { data: favoriteList } = useGetFavoriteItemsQuery(undefined, {
+    skip: !token,
+  })
   let items
   items = data
     ?.filter((item) => item.tags.includes(tag[3]))
