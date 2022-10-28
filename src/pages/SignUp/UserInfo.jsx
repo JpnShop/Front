@@ -8,7 +8,7 @@ import { useSignupMutation } from '../../store/api/authApiSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { resetInfo, changeInfo } from '../../store/slices/shippingInfoSlice'
 import ErrorCom from '../../components/common/ErrorCom'
-import Loader from '../../components/layout/Loader'
+import Loader from '../../components/layout/Loading'
 import { useCheckEmailQuery } from '../../store/api/authApiSlice'
 import Modal from '../../components/common/Modal'
 import { cls } from '../../utils'
@@ -24,8 +24,8 @@ const UserInfo = () => {
   const [alret, setAlret] = useState({
     email: null,
     lastName: null,
-    furiganaFirst: null,
-    furiganaLast: null,
+    firstFurigana: null,
+    lastFurigana: null,
     phoneNumber: null,
     zipcode: null,
     city: null,
@@ -54,8 +54,8 @@ const UserInfo = () => {
           street: inputValue.street,
           zipcode: inputValue.zipcode,
         },
-        furiganaFirst: inputValue.furiganaFirst,
-        furiganaLast: inputValue.furiganaLast,
+        firstFurigana: inputValue.firstFurigana,
+        lastFurigana: inputValue.lastFurigana,
       })
       if (signupHandler?.error?.status === 500) {
         return alert('서버에러가 발생했습니다.')
@@ -121,7 +121,7 @@ const UserInfo = () => {
   useEffect(() => {
     inputValue.email !== '' &&
       inputValue.lastName !== '' &&
-      inputValue.furiganaFirst !== '' &&
+      inputValue.firstFurigana !== '' &&
       inputValue.phoneNumber !== '' &&
       inputValue.zipcode !== '' &&
       setDisabled(true)
@@ -228,24 +228,24 @@ const UserInfo = () => {
           </label>
           <div className="flex">
             <input
-              name="furiganaFirst"
-              value={inputValue['furiganaFirst']}
+              name="firstFurigana"
+              value={inputValue['firstFurigana']}
               onChange={ChangeHandler}
-              onBlur={() => checkRegex('furiganaFirst')}
+              onBlur={() => checkRegex('firstFurigana')}
               placeholder="성"
               className="pl-3 w-full h-[3rem] flex-initial box-border w- py-[0.75rem] text-[0.875rem] transition shadow-white border border-neutral-200 rounded mr-[0.813rem]"
             />
             <input
-              name="furiganaLast"
-              value={inputValue['furiganaLast']}
-              onBlur={() => checkRegex('furiganaLast')}
+              name="lastFurigana"
+              value={inputValue['lastFurigana']}
+              onBlur={() => checkRegex('lastFurigana')}
               onChange={ChangeHandler}
               placeholder="이름"
               className="pl-3 w-full h-[3rem] flex-initial box-border py-[0.75rem] text-[0.875rem] transition shadow-white border border-neutral-200 rounded"
             />
           </div>
           <p className="mt-[8px] font-[11px] text-red-600 text-[12px]">
-            {alert.furiganaFirst} {alert.furiganaLast}
+            {alert.firstFurigana} {alert.lastFurigana}
           </p>
           <label
             htmlFor="loginJoinMembershipTel"
