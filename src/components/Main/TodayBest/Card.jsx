@@ -37,7 +37,7 @@ const Card = ({ product, active }) => {
         {active ? (
           <div className="absolute flex right-1 bottom-0 gap-3">
             <div onClick={onClick}>
-              <HeartIcon size="25" off={favorite} fill={'#000'} />
+              <HeartIcon size="25" off={!favorite} fill={'#000'} />
             </div>
             <img src={cart} alt="cart" width="25" hegiht="25" />
           </div>

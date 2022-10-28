@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import Card from './Card'
 import 'swiper/css'
 import '~/todayBest_swiper.css'
+import { useGetProductsQuery } from '../../../store/api/productApiSlice'
 import {
   womanBestList,
   manBestList,
@@ -11,13 +12,14 @@ import {
 } from '../../../dummy/main'
 
 const SwiperContainer = ({ category }) => {
+  const { data } = useGetProductsQuery()
   let list
   switch (category) {
     case '우먼':
-      list = womanBestList
+      list = data.filter((item) => item.tags.includes('women'))
       break
     case '맨':
-      list = manBestList
+      list = data.filter((item) => item.tags.includes('men'))
       break
     case '라이프':
       list = lifeBestList

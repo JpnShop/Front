@@ -65,14 +65,18 @@ function Card({ data, purchase, favorites }) {
             {productName}
           </div>
           {!purchase && (
-            <div className="test-xs font-medium text-black-600">{price} ¥</div>
+            <div className="test-xs font-medium text-black-600">
+              {price.toLocaleString()} ¥
+            </div>
           )}
         </div>
         {!purchase ||
           (!location.includes('recent-view') && (
             <div className="flex text-sm font-bold">
               <div className="text-primary mr-3">{sale}%</div>
-              <div className="text-black-100">{saleCost} ¥</div>
+              <div className="text-black-100">
+                {saleCost.toLocaleString()} ¥
+              </div>
             </div>
           ))}
       </div>
