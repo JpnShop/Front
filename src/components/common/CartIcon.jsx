@@ -11,7 +11,7 @@ const CartICon = () => {
   let cartItems
 
   if (token) {
-    const { data: list } = useGetCartItemsQuery()
+    const { data: list } = useGetCartItemsQuery(undefined, { skip: !token })
     cartItems = list
   } else {
     cartItems = useSelector((state) => state.cart)

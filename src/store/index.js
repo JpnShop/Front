@@ -5,6 +5,7 @@ import productReducer from './slices/productSlice'
 import authReducer from './slices/authSlice'
 import { apiSlice } from './api/apiSlice'
 import cartReducer from './slices/cartSlice'
+import favoritesReducer from './slices/favoriteSlice'
 import shippingInfoReducer from './slices/shippingInfoSlice'
 
 const rootReducer = combineReducers({
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
   product: productReducer,
   cart: cartReducer,
   shippingInfo: shippingInfoReducer,
+  favorites: favoritesReducer,
 })
 
 export const store = configureStore({
