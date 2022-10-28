@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { cls } from '../../../utils'
 import HeartIcon from '../../common/HeartIcon'
-import { ReactComponent as LinkIcon } from '/public/assets/link.svg'
+import { ReactComponent as LinkIcon } from '/public/asssets/link.svg'
 import ModalContent from './ModalContent'
 import ProductCard from './ProductCard'
 import KakaoIcon from '/public/assets/kakao-icon.png'
@@ -77,7 +77,7 @@ const DetailBtn = ({ list, kakaoShareBtn }) => {
       product_id: list['productId'],
       count: items['count'],
     })
-    // dispatch(resetCount())
+    dispatch(resetCount())
   }
 
   const onClickHandler = () => {
