@@ -1,12 +1,23 @@
 import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { likedList } from '~/dummy/liked'
+import { likedList as dummy } from '~/dummy/liked'
+import { useGetSimpleProductsQuery } from '../../store/api/productApiSlice'
+
 import Card from '../../components/CardList/Card'
 import BackIcon from '../../components/common/BackIcon'
 
 function NoResult() {
   const { search } = useParams()
   const navigate = useNavigate()
+  const recentViewProduct = 'recentViewProduct'
+  const recentViews = JSON.parse(localStorage.getItem(recentViewProduct))
+  // API요청 보낼 query string 연결
+  const queryString = recentViews.map((id) => `productId=${id}`).join('&')
+  const {
+    data: likedList,
+    isLoading,
+    isError,
+  } = useGetSimpleProductsQuery(queryString)
 
   return (
     <div>
@@ -28,7 +39,7 @@ function NoResult() {
           </button>
         </div>
         <div className="px-5 flex overflow-x-auto">
-          {likedList.slice(0, 10).map((item, idx) => (
+          {dummy?.slice(0, 10).map((item, idx) => (
             <div key={idx} className="w-28 mx-1 shrink-0">
               <Card data={item} purchase={true} />
             </div>
@@ -47,7 +58,7 @@ function NoResult() {
           </button>
         </div>
         <div className="px-4 flex overflow-x-auto pb-7">
-          {likedList.map((item, idx) => (
+          {likedList?.map((item, idx) => (
             <div key={idx} className="w-28 mx-1 shrink-0">
               <Card data={item} purchase={true} />
             </div>

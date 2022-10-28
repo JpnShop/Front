@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
 import { ReactComponent as GoBackIcon } from '/public/assets/back-on.svg'
 import { cls } from '../../utils'
-const payway = ['신용/체크카드', '무통장입금', '애플페이', '라인페이']
+const payway = [
+  { en: 'CARD', ko: '신용/체크카드' },
+  { en: 'BANK', ko: '무통장입금' },
+  { en: 'APPLE', ko: '애플페이' },
+  { en: 'LINE', ko: '라인페이' },
+]
 
 const PayWay = ({ paymathod, onClick }) => {
   const [open, setOpen] = useState(false)
@@ -28,13 +33,13 @@ const PayWay = ({ paymathod, onClick }) => {
               key={idx}
               className={cls(
                 'rounded flex items-center justify-center w-[162px] h-[52px] border border-black-400',
-                paymathod === item
+                paymathod.ko === item.ko
                   ? 'bg-point text-white-200 '
                   : 'bg-white-200 text-black-800 ',
               )}
               onClick={() => onClick(item)}
             >
-              {item}
+              {item.ko}
             </div>
           ))}
         </div>

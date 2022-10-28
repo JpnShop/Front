@@ -5,8 +5,10 @@ import {
   useAddFavoriteItemMutation,
   useDeleteFavoriteItemMutation,
 } from '../../store/api/favoriteApiSlice'
+import { useGetFavoriteItemsQuery } from '../../store/api/favoriteApiSlice'
+function Container({ list, pt = 'pt-52' }) {
+  const { data: favorites } = useGetFavoriteItemsQuery()
 
-function Container({ list, pt = 'pt-52', favorites }) {
   return (
     <div className={`${pt}`}>
       {list && list.length > 0 ? (

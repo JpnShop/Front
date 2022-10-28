@@ -4,6 +4,7 @@ import {
   useAddFavoriteItemMutation,
   useDeleteFavoriteItemMutation,
 } from '../../../store/api/favoriteApiSlice'
+import { useNavigate } from 'react-router-dom'
 
 const SimiliarCard = ({ item, favorites }) => {
   const [addFavoriteItem] = useAddFavoriteItemMutation()
@@ -12,15 +13,23 @@ const SimiliarCard = ({ item, favorites }) => {
     () => favorites?.some((element) => element.productId === item.productId),
     [favorites, item],
   )
+  const navigate = useNavigate()
+  const goDetailPage = (e) => {
+    navigate(`/product/${item.productId}`)
+  }
+  const onHeartClick = useCallback(
+    (e) => {
+      e.stopPropagation()
 
-  const onHeartClick = useCallback(() => {
-    isFavorite
-      ? deleteFavoriteItem({ product_id: item.productId })
-      : addFavoriteItem({ product_id: item.productId })
-  }, [isFavorite, item])
+      isFavorite
+        ? deleteFavoriteItem({ product_id: item.productId })
+        : addFavoriteItem({ product_id: item.productId })
+    },
+    [isFavorite, item],
+  )
 
   return (
-    <div>
+    <div onClick={goDetailPage}>
       <div
         className="w-[130px] h-[131px] bg-cover"
         style={{

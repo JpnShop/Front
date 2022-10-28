@@ -3,7 +3,6 @@ import { useGetUserInfoQuery } from '../../../store/api/userApiSlice'
 
 const PaymentInfo = ({ items, paymathod, createDate }) => {
   const { data } = useGetUserInfoQuery()
-  console.log('here', data)
   return (
     <>
       <div className="py-9">

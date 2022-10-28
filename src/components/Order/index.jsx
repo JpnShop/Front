@@ -11,7 +11,10 @@ import OrderBtn from './OrderBtn'
 
 const index = () => {
   const { state } = useLocation()
-  const [paymathod, setPaymathod] = useState('신용/체크카드')
+  const [paymathod, setPaymathod] = useState({
+    en: 'CARD',
+    ko: '신용/체크카드',
+  })
   const selectHandler = (item) => {
     setPaymathod(item)
   }
@@ -22,7 +25,7 @@ const index = () => {
       <Coupon />
       <PayWay onClick={selectHandler} paymathod={paymathod} />
       <TotalPrice items={state} />
-      <OrderBtn items={state} paymathod={paymathod} />
+      <OrderBtn items={state} paymathod={paymathod.ko} />
     </>
   )
 }

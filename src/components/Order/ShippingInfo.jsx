@@ -35,7 +35,6 @@ const ShippingInfo = () => {
         lastName: data?.lastName,
         phoneNumber: data?.phoneNumber,
       })
-      console.log(response)
       if (!response?.error) {
         alert('주소지가 저장되었습니다.')
       } else {
