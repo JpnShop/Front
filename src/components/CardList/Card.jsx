@@ -1,7 +1,6 @@
 import React, { useMemo, useCallback } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { cls } from '../../utils'
-import heart from '/public/assets/heart-on.svg'
 import HeartIcon from '../common/HeartIcon'
 import {
   useAddFavoriteItemMutation,

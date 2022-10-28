@@ -10,11 +10,11 @@ function AfterSearch() {
   const { data } = useGetProductsQuery()
   const product2 = data?.filter((item) => item.productName.includes(search))
   const product3 = data?.filter((item) => item.brandKo.includes(search))
-  const products = product2.concat(product3)
+  const products = product2?.concat(product3)
 
   return (
     <div className="mt-7">
-      {products && products.length !== 0 ? (
+      {data && products && products.length !== 0 ? (
         <HaveResult product={products} />
       ) : (
         <NoResult />
