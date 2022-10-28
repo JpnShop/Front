@@ -29,7 +29,7 @@ const Cart = ({ cartItems }) => {
           </div>
           <div className="text-point text-xs">선택 삭제</div>
         </div>
-        {cartItems.length === 0 && (
+        {cartItems?.length === 0 && (
           <div className="px-5">
             <h2 className=" mt-[150px] text-[20px] font-bold ml-2 pl-6 text-center">
               장바구니에 상품이 없습니다.
@@ -42,7 +42,7 @@ const Cart = ({ cartItems }) => {
             </div>
           </div>
         )}
-        {cartItems.map((item, idx) => (
+        {cartItems?.map((item, idx) => (
           <CartItem
             item={item}
             key={idx}
@@ -50,7 +50,7 @@ const Cart = ({ cartItems }) => {
           />
         ))}
       </div>
-      {cartItems.length !== 0 && (
+      {cartItems?.length !== 0 && (
         <>
           <Total items={checkedItems} />
           <CartBtn items={checkedItems} />
