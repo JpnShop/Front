@@ -67,6 +67,7 @@ const DetailBtn = ({ list, kakaoShareBtn }) => {
   const ModalOpenHandler = () => {
     buyProduct && setBuyProduct((prev) => !prev)
     setIsOpen((prev) => !prev)
+    dispatch(resetCount())
   }
   const GoToCart = () => {
     setBuyProduct((prev) => !prev)
@@ -77,9 +78,6 @@ const DetailBtn = ({ list, kakaoShareBtn }) => {
       product_id: list['productId'],
       count: items['count'],
     })
-    setTimeout(() => {
-      dispatch(resetCount())
-    }, 2000)
   }
 
   const onClickHandler = () => {
@@ -115,6 +113,9 @@ const DetailBtn = ({ list, kakaoShareBtn }) => {
   const ContinueShopping = () => {
     setBuyProduct(false)
     setIsOpen(false)
+    setTimeout(() => {
+      dispatch(resetCount())
+    }, 2000)
   }
 
   useEffect(() => {
