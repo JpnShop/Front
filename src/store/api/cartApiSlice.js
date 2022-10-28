@@ -31,7 +31,7 @@ export const cartApi = apiSlice.injectEndpoints({
       query: (data) => {
         return {
           url: 'carts',
-          method: 'POST',
+          method: 'PUT',
           body: data,
         }
       },

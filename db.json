@@ -1,18 +1,568 @@
-{
-  "status": "rejected",
-  "endpointName": "checkUsername",
-  "requestId": "UwBqKzDE6PFrkiV-mGjQt",
-  "originalArgs": "hahahololo",
-  "startedTimeStamp": 1666893498964,
-  "error": {
-    "status": "PARSING_ERROR",
-    "originalStatus": 200,
-    "data": "사용 가능한 아이디입니다.",
-    "error": "SyntaxError: Unexpected token '사', \"사용 가능한 아이디입니다.\" is not valid JSON"
+[
+  {
+    "productId": 1,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
+    "brandKo": "어라운드앤",
+    "tags": ["패션", "women", "가방", "aroundann", "lena"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory_model-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory_model-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory_model-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory_model-4.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory_model-5.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory-4.jpg"
+    ],
+    "productName": "lena bag ivory",
+    "sale": 10,
+    "price": 5200,
+    "brand": "aroundAnn",
+    "stock": 100,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_ivory.jpg"
   },
-  "isUninitialized": false,
-  "isLoading": false,
-  "isSuccess": false,
-  "isError": true,
-  "isFetching": false
-}
+  {
+    "productId": 2,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
+    "brandKo": "어라운드앤",
+    "tags": ["패션", "women", "가방", "aroundann", "lena"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black_model-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black_model-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black_model-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black_model-4.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black_model-5.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black-4.jpg"
+    ],
+    "productName": "lena bag black",
+    "sale": 10,
+    "price": 5200,
+    "brand": "aroundAnn",
+    "stock": 100,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/lena+bag_black-1.jpg"
+  },
+  {
+    "productId": 3,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
+    "brandKo": "어라운드앤",
+    "tags": ["패션", "women", "가방", "aroundann", "Samantha"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey_model-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey_model-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey_model-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey_model-4.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey_model-5.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey-4.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey-5.jpg"
+    ],
+    "productName": "Samantha bag grey",
+    "sale": 10,
+    "price": 5200,
+    "brand": "aroundAnn",
+    "stock": 100,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Samantha+bag_grey-1.jpg"
+  },
+  {
+    "productId": 4,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
+    "brandKo": "어라운드앤",
+    "tags": ["패션", "women", "가방", "aroundann", "Bella"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_pink_model-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_pink_model-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_pink_model-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_pink_model-4.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_pink-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_pink-2.jpg"
+    ],
+    "productName": "Bella bag pink",
+    "sale": 10,
+    "price": 6800,
+    "brand": "aroundAnn",
+    "stock": 100,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_pink-1.jpg"
+  },
+  {
+    "productId": 5,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
+    "brandKo": "어라운드앤",
+    "tags": ["패션", "women", "가방", "aroundann", "Bella"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_black_model-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_black_model-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_black_model-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_black_model-4.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_black-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_black-2.jpg"
+    ],
+    "productName": "Bella bag black",
+    "sale": 10,
+    "price": 6900,
+    "brand": "aroundAnn",
+    "stock": 100,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Bella+bag_black-1.jpg"
+  },
+  {
+    "productId": 6,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
+    "brandKo": "어라운드앤",
+    "tags": ["패션", "women", "가방", "aroundann", "Kristin"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_ivory_model-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_ivory_model-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_ivory_model-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_ivory_model-4.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_ivory-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_ivory-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_ivory-3.jpg"
+    ],
+    "productName": "Kristin bag ivory",
+    "sale": 10,
+    "price": 3900,
+    "brand": "aroundAnn",
+    "stock": 100,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_ivory-1.jpg"
+  },
+  {
+    "productId": 7,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
+    "brandKo": "어라운드앤",
+    "tags": ["패션", "women", "가방", "aroundann", "Kristin"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_black_model-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_black_model-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_black_model-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_black_model-4.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_black-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_black-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_black-3.jpg"
+    ],
+    "productName": "Kristin bag black",
+    "sale": 10,
+    "price": 3900,
+    "brand": "aroundAnn",
+    "stock": 100,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Kristin+bag_black-1.jpg"
+  },
+  {
+    "productId": 8,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
+    "brandKo": "어라운드앤",
+    "tags": ["패션", "women", "가방", "숄더백", "aroundann", "Ami"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Ami+bag_black_model-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Ami+bag_black_model-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Ami+bag_black_model-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Ami+bag_black_model-4.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Ami+bag_black-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Ami+bag_black-2.jpg"
+    ],
+    "productName": "Ami bag black",
+    "sale": 10,
+    "price": 3900,
+    "brand": "aroundAnn",
+    "stock": 100,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Ami+bag_black-1.jpg"
+  },
+  {
+    "productId": 9,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
+    "brandKo": "어라운드앤",
+    "tags": ["패션", "women", "가방", "aroundann", "Rinda"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_pink_model-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_pink_model-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_pink_model-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_pink_model-4.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_pink-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_pink-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_pink-3.jpg"
+    ],
+    "productName": "Rinda bag pink",
+    "sale": 10,
+    "price": 4200,
+    "brand": "aroundAnn",
+    "stock": 100,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_pink-1.jpg"
+  },
+  {
+    "productId": 10,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
+    "brandKo": "어라운드앤",
+    "tags": ["패션", "women", "가방", "aroundann", "Rinda"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_ivory_model-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_ivory_model-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_ivory_model-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_ivory_model-4.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_ivory-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_ivory-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_ivory-3.jpg"
+    ],
+    "productName": "Rinda bag ivory",
+    "sale": 10,
+    "price": 4200,
+    "brand": "aroundAnn",
+    "stock": 100,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Rinda+bag_ivory-1.jpg"
+  },
+  {
+    "productId": 11,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
+    "brandKo": "어라운드앤",
+    "tags": ["패션", "women", "가방", "숄더백", "aroundann", "troi"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/troi+bag_black_model-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/troi+bag_black_model-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/troi+bag_black_model-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/troi+bag_black_model-4.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/troi+bag_black-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/troi+bag_black-2.jpg"
+    ],
+    "productName": "troi bag black",
+    "sale": 10,
+    "price": 4300,
+    "brand": "aroundAnn",
+    "stock": 100,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/troi+bag_black-1.jpg"
+  },
+  {
+    "productId": 12,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
+    "brandKo": "어라운드앤",
+    "tags": ["패션", "women", "가방", "숄더백", "aroundann", "Wrinkle"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Wrinkle+bag_ivory_model-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Wrinkle+bag_ivory_model-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Wrinkle+bag_ivory_model-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Wrinkle+bag_ivory_model-4.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Wrinkle+bag_ivory-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Wrinkle+bag_ivory-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Wrinkle+bag_ivory-3.jpg"
+    ],
+    "productName": "Wrinkle bag ivory",
+    "sale": 10,
+    "price": 4500,
+    "brand": "aroundAnn",
+    "stock": 100,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Wrinkle+bag_ivory-1.jpg"
+  },
+  {
+    "productId": 13,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
+    "brandKo": "어라운드앤",
+    "tags": ["패션", "women", "가방", "숄더백", "aroundann", "Double"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown_model-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown_model-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown_model-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown_model-4.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown_model-5.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown_model-6.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown-4.jpg"
+    ],
+    "productName": "Double bag brown",
+    "sale": 10,
+    "price": 3800,
+    "brand": "aroundAnn",
+    "stock": 100,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Double+bag_brown-1.jpg"
+  },
+  {
+    "productId": 14,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
+    "brandKo": "어라운드앤",
+    "tags": ["패션", "가방", "숄더백", "women", "aroundann", "Sally"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory_model-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory_model-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory_model-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory_model-4.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory_model-5.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory-3.jpg"
+    ],
+    "productName": "Sally bag ivory",
+    "sale": 10,
+    "price": 3600,
+    "brand": "aroundAnn",
+    "stock": 100,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_ivory-1.jpg"
+  },
+  {
+    "productId": 15,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
+    "brandKo": "어라운드앤",
+    "tags": ["패션", "가방", "숄더백", "women", "aroundann", "Sally"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown_model-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown_model-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown_model-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown_model-4.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown_model-5.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown-3.jpg"
+    ],
+    "productName": "Sally bag ivory",
+    "sale": 10,
+    "price": 3600,
+    "brand": "aroundAnn",
+    "stock": 100,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_brown-1.jpg"
+  },
+  {
+    "productId": 16,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/aroundannbrand.png",
+    "brandKo": "어라운드앤",
+    "tags": ["패션", "가방", "숄더백", "women", "aroundann", "Sally"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black_model-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black_model-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black_model-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black_model-4.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black_model-5.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black-3.jpg"
+    ],
+    "productName": "Sally bag black",
+    "sale": 10,
+    "price": 3600,
+    "brand": "aroundAnn",
+    "stock": 100,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/final/Sally+bag_black-1.jpg"
+  },
+  {
+    "productId": 17,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/kumebrand.png",
+    "brandKo": "쿠메",
+    "tags": ["패션", "의류", "상의", "women"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-4.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-5.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-6.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-7.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-8.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-9.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK_MODEL-10.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK-2.jpg"
+    ],
+    "productName": "TWEED BOMBER JACKET BLACK",
+    "sale": 10,
+    "price": 36000,
+    "brand": "KUME",
+    "stock": 200,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/TWEED+BOMBER+JACKET+BLACK-1.jpg"
+  },
+  {
+    "productId": 18,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/kumebrand.png",
+    "brandKo": "쿠메",
+    "tags": ["패션", "의류", "하의", "women"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/FRAYED+SEMI-WIDE+DENIM+PANTS+BLACK_MODEL-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/FRAYED+SEMI-WIDE+DENIM+PANTS+BLACK_MODEL-2.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/FRAYED+SEMI-WIDE+DENIM+PANTS+BLACK-1.jpg"
+    ],
+    "productName": "FRAYED SEMI-WIDE DENIM PANTS BLACK",
+    "sale": 10,
+    "price": 19500,
+    "brand": "KUME",
+    "stock": 200,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/FRAYED+SEMI-WIDE+DENIM+PANTS+BLACK-1.jpg"
+  },
+  {
+    "productId": 19,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/kumebrand.png",
+    "brandKo": "쿠메",
+    "tags": ["패션", "의류", "하의", "women"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/FRAYED+SEMI-WIDE+DENIM+PANTS+IVORY_MODEL-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/FRAYED+SEMI-WIDE+DENIM+PANTS+IVORY_MODEL-2.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/FRAYED+SEMI-WIDE+DENIM+PANTS+IVORY-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/FRAYED+SEMI-WIDE+DENIM+PANTS+IVORY-2.jpg"
+    ],
+    "productName": "FRAYED SEMI-WIDE DENIM PANTS IVORY",
+    "sale": 10,
+    "price": 21500,
+    "brand": "KUME",
+    "stock": 200,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/FRAYED+SEMI-WIDE+DENIM+PANTS+IVORY-1"
+  },
+  {
+    "productId": 20,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/kumebrand.png",
+    "brandKo": "쿠메",
+    "tags": ["패션", "의류", "상의", "women"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/DOUBLE+POCKET+DENIM+BLOUSE+MEDIUM+BLUE_MODEL-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/DOUBLE+POCKET+DENIM+BLOUSE+MEDIUM+BLUE_MODEL-2.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/DOUBLE+POCKET+DENIM+BLOUSE+MEDIUM+BLUE-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/DOUBLE+POCKET+DENIM+BLOUSE+MEDIUM+BLUE-2.jpg"
+    ],
+    "productName": "DOUBLE POCKET DENIM BLOUSE MEDIUM BLUE",
+    "sale": 0,
+    "price": 19500,
+    "brand": "KUME",
+    "stock": 200,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/kume/DOUBLE+POCKET+DENIM+BLOUSE+MEDIUM+BLUE-1.jpg"
+  },
+  {
+    "productId": 21,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/citybreezeformenbrand.png",
+    "brandKo": "시티브리즈 포 맨",
+    "tags": ["패션", "의류", "상의", "men"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/INDIGO_MODEL-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/INDIGO_MODEL-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/INDIGO_MODEL-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/INDIGO_MODEL-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/INDIGO_MODEL-4.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/INDIGO_MODEL-5.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/INDIGO_MODEL-6.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/INDIGO_MODEL-7.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/INDIGO-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/INDIGO-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/INDIGO-3.jpg"
+    ],
+    "productName": "스티치 포인트 데님 자켓 INDIGO",
+    "sale": 5,
+    "price": 7900,
+    "brand": "CITYBREEZE for MEN",
+    "stock": 150,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/INDIGO-1.jpg"
+  },
+  {
+    "productId": 22,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/citybreezeformenbrand.png",
+    "brandKo": "시티브리즈 포 맨",
+    "tags": ["패션", "의류", "상의", "men"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/BEIGE_MODEL-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/BEIGE_MODEL-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/BEIGE_MODEL-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/BEIGE_MODEL-4.jpg\"",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/BEIGE_MODEL-5.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/BEIGE_MODEL-6.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/BEIGE-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/BEIGE-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/BEIGE-3.jpg"
+    ],
+    "productName": "알파카 오버핏 카라 니트 BEIGE",
+    "sale": 5,
+    "price": 17900,
+    "brand": "CITYBREEZE for MEN",
+    "stock": 150,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/BEIGE-1.jpg"
+  },
+  {
+    "productId": 23,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/citybreezeformenbrand.png",
+    "brandKo": "시티브리즈 포 맨",
+    "tags": ["패션", "의류", "상의", "men"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/BLACK_MODEL-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/BLACK_MODEL-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/BLACK_MODEL-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/BLACK_MODEL-4.jpg\"",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/BLACK_MODEL-5.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/BLACK_MODEL-6.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/BLACK_MODEL-7.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/BLACK-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/BLACK-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/BLACK-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/BLACK-4.jpg"
+    ],
+    "productName": "알파카 오버핏 니트 가디건 BLACK",
+    "sale": 5,
+    "price": 17900,
+    "brand": "CITYBREEZE for MEN",
+    "stock": 150,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/BLACK-1.jpg"
+  },
+  {
+    "productId": 24,
+    "brandImg": "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/citybreezeformenbrand.png",
+    "brandKo": "시티브리즈 포 맨",
+    "tags": ["패션", "의류", "상의", "men"],
+    "detailList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/MELANGE+GREY_MODEL-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/MELANGE+GREY_MODEL-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/MELANGE+GREY_MODEL-3.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/MELANGE+GREY_MODEL-4.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/MELANGE+GREY_MODEL-5.jpg"
+    ],
+    "detailThumbList": [
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/MELANGE+GREY-1.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/MELANGE+GREY-2.jpg",
+      "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/MELANGE+GREY-3.jpg"
+    ],
+    "productName": "로고 자수 베이직 후드 스웻 셔츠 MELANGE GREY",
+    "sale": 5,
+    "price": 8900,
+    "brand": "CITYBREEZE for MEN",
+    "stock": 150,
+    "thumbnail": "https://fianl.s3.ap-northeast-2.amazonaws.com/CITYBREEZE+for+MEN/MELANGE+GREY-1.jpg"
+  }
+]

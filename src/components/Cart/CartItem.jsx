@@ -12,7 +12,17 @@ const CartItem = ({ item, onCheckedHandler }) => {
     onCheckedHandler()
   }
 
-  const { id, thumbnail, brand, productName, price, sale, stock, count } = item
+  const {
+    productId,
+    id,
+    thumbnail,
+    brand,
+    productName,
+    price,
+    sale,
+    stock,
+    count,
+  } = item
   return (
     <>
       <div className="flex text-[14px] mb-[12px]">
@@ -33,7 +43,7 @@ const CartItem = ({ item, onCheckedHandler }) => {
             {productName}
           </div>
           <div className="flex justify-between mt-1">
-            <CountBtn id={id} count={count} />
+            <CountBtn id={productId} count={count} />
             <div className="text-center">
               <div className=" text-xs text-black-600 line-through">
                 {(price * count).toLocaleString()} ¥
@@ -47,13 +57,11 @@ const CartItem = ({ item, onCheckedHandler }) => {
             </div>
           </div>
 
-          <div className="mt-8 text-primary">
-            {stock} {id}개 남음
-          </div>
+          <div className="mt-8 text-primary">{stock}개 남음</div>
         </div>
         <div
           className="pr-5"
-          onClick={() => deleteCartItem({ product_id: id })}
+          onClick={() => deleteCartItem({ product_id: productId })}
         >
           <svg
             width="14"
