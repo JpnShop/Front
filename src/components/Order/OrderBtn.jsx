@@ -5,17 +5,25 @@ import { useAddOrdersMutation } from '../../store/api/orderApiSlice'
 
 const OrderBtn = ({ items, paymathod }) => {
   const navigate = useNavigate()
-  const [addOrders] = useAddOrdersMutation()
+  const [addOrders, { isLoading, isError }] = useAddOrdersMutation()
   const products = items.map((item) => {
     return {
-      product_id: item.productId,
-      count: item.count,
+      totalOrders: {
+        productId: item.productId,
+        count: item.count,
+      },
     }
   })
   const [product] = products
-  const paynowHandler = (id) => {
-    addOrders({ ...product, paymathod })
-    navigate('/order/completed', { state: items })
+  const paynowHandler = async () => {
+    try {
+      const orderData = await addOrders({ ...product, paymathod })
+      console.log('orderData', orderData)
+      const createDate = new Date()
+      navigate('/order/completed', { state: { items, paymathod, createDate } })
+    } catch (error) {
+      console.log(error)
+    }
   }
   const [item] = items
   return (

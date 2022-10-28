@@ -19,8 +19,6 @@ const SimiliarCard = ({ item, favorites }) => {
       : addFavoriteItem({ product_id: item.productId })
   }, [isFavorite, item])
 
-  console.log('이게무슨일이야?', isFavorite)
-
   return (
     <div>
       <div
