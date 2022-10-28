@@ -5,12 +5,16 @@ import { useGetProductQuery } from '../../../store/api/productApiSlice'
 import { useGetProductsQuery } from '../../../store/api/productApiSlice'
 import AnotherCard from './AnotherCard'
 import { useGetFavoriteItemsQuery } from '../../../store/api/favoriteApiSlice'
+import { useCookies } from 'react-cookie'
+import { useSelector } from 'react-redux'
 
 const Another = () => {
   const params = useParams()
   const { data } = useGetProductQuery(params.id)
   const { data: favoriteList } = useGetFavoriteItemsQuery()
-  const navigate = useNavigate()
+  const [cookies, setCookie, removeCookie] = useCookies()
+  const token = cookies.accessToken
+  const favriteItems = useSelector((state) => state.favorites)
   const { data: datas } = useGetProductsQuery()
   const list = datas?.filter((item) => item.brand === data.brand)
 
@@ -23,7 +27,11 @@ const Another = () => {
       <div className="flex gap-5 overflow-x-scroll">
         {list?.map((item) => (
           <div key={item.productId}>
-            <AnotherCard item={item} favorites={favoriteList} />
+            <AnotherCard
+              item={item}
+              favorites={token ? favoriteList : favriteItems}
+              token={token}
+            />
           </div>
         ))}
       </div>

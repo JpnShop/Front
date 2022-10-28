@@ -6,8 +6,11 @@ import {
   useAddFavoriteItemMutation,
   useDeleteFavoriteItemMutation,
 } from '../../store/api/favoriteApiSlice'
+import { changeFavoriteItems } from '../../store/slices/favoriteSlice'
+import { useDispatch } from 'react-redux'
 
-function Card({ data, purchase, favorites }) {
+function Card({ data, purchase, favorites, token }) {
+  const dispatch = useDispatch()
   const { brand, productName, thumbnail, price, sale } = data
   const saleCost = parseInt((price * (100 - sale)) / 100)
   const location = useLocation().pathname
@@ -21,9 +24,11 @@ function Card({ data, purchase, favorites }) {
   const onHeartClick = useCallback(
     (e) => {
       e.stopPropagation()
-      isFavorite
-        ? deleteFavoriteItem({ product_id: data.productId })
-        : addFavoriteItem({ product_id: data.productId })
+      token
+        ? isFavorite
+          ? deleteFavoriteItem({ product_id: data.productId })
+          : addFavoriteItem({ productId: data.productId })
+        : dispatch(changeFavoriteItems({ productId: data.productId }))
     },
     [isFavorite, data],
   )

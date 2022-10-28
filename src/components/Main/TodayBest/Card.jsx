@@ -8,10 +8,13 @@ import {
   useAddFavoriteItemMutation,
   useDeleteFavoriteItemMutation,
 } from '../../../store/api/favoriteApiSlice'
+import { useDispatch } from 'react-redux'
+import { changeFavoriteItems } from '../../../store/slices/favoriteSlice'
 
-const Card = ({ product, active, favorites }) => {
+const Card = ({ product, active, favorites, token }) => {
   const { detailThumbList, thumbnail, productName, sale, price, productId } =
     product
+  const dispatch = useDispatch()
   const navigate = useNavigate()
   const goDetailPage = (e) => {
     navigate(`/product/${productId}`)
@@ -26,9 +29,11 @@ const Card = ({ product, active, favorites }) => {
   const onHeartClick = useCallback(
     (e) => {
       e.stopPropagation()
-      isFavorite
-        ? deleteFavoriteItem({ product_id: product.productId })
-        : addFavoriteItem({ product_id: product.productId })
+      token
+        ? isFavorite
+          ? deleteFavoriteItem({ product_id: product.productId })
+          : addFavoriteItem({ productId: product.productId })
+        : dispatch(changeFavoriteItems({ productId: product.productId }))
     },
     [isFavorite, product],
   )

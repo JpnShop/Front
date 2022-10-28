@@ -17,9 +17,14 @@ import Loading from '../../layout/Loading'
 import ErrorCom from '../../common/ErrorCom'
 import GoTop from '../../common/GoTop'
 import SizeDetail from './SizeDetail'
+import { useCookies } from 'react-cookie'
+import { useSelector } from 'react-redux'
 
 const Detail = () => {
   const { id } = useParams()
+  const [cookies, setCookie, removeCookie] = useCookies()
+  const token = cookies.accessToken
+  const favriteItems = useSelector((state) => state.favorites)
   const { data: list, isLoading, isError } = useGetProductQuery(id)
   const [kakaoShare, setKakaoShare] = useState(false)
   const recentViewProduct = 'recentViewProduct'
@@ -72,7 +77,11 @@ const Detail = () => {
         list && (
           <div className="relative mb-10">
             <MainSlide list={list.detailThumbList} />
-            <Explanation list={list} favorites={favorites} />
+            <Explanation
+              list={list}
+              favorites={token ? favorites : favriteItems}
+              token={token}
+            />
             <Brand list={list} />
 
             <DetailDesc list={list.detailList} />
