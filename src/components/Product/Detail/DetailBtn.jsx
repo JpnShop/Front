@@ -77,7 +77,9 @@ const DetailBtn = ({ list, kakaoShareBtn }) => {
       product_id: list['productId'],
       count: items['count'],
     })
-    dispatch(resetCount())
+    setTimeout(() => {
+      dispatch(resetCount())
+    }, 2000)
   }
 
   const onClickHandler = () => {
