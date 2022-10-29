@@ -24,7 +24,7 @@ const index = () => {
     privateYn: false,
     password: null,
     images: [],
-    createdDate: null,
+    createdDate: new Date(),
   })
   const [imageFile, setImageFile] = useState([])
   const [isOpen, ModalControlHandler] = useModalControl()
@@ -89,8 +89,9 @@ const index = () => {
   }
   const AddQuestionHandler = async () => {
     if (!userValue.title || !userValue.content) {
-      ModalControlHandler()
+      return ModalControlHandler()
     }
+
     const formData = new FormData()
 
     for (const key in userValue) {
@@ -144,6 +145,10 @@ const index = () => {
       </>
     )
   })
+
+  useEffect(() => {
+    console.log(userValue)
+  }, [userValue])
 
   return (
     <>
