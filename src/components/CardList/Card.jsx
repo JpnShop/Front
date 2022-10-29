@@ -31,7 +31,7 @@ function Card({ data, purchase, favorites, token }) {
       token
         ? isFavorite
           ? deleteFavoriteItem({ product_id: data.productId })
-          : addFavoriteItem({ productId: data.productId })
+          : addFavoriteItem({ product_id: data.productId })
         : dispatch(changeFavoriteItems({ productId: data.productId }))
     },
     [isFavorite, data],

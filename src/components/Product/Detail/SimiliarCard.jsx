@@ -30,7 +30,7 @@ const SimiliarCard = ({ item, favorites, token }) => {
       token
         ? isFavorite
           ? deleteFavoriteItem({ product_id: item.productId })
-          : addFavoriteItem({ productId: item.productId })
+          : addFavoriteItem({ product_id: item.productId })
         : dispatch(changeFavoriteItems({ productId: item.productId }))
     },
     [isFavorite, item],
