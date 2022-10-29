@@ -8,12 +8,12 @@ import { useCheckUsernameQuery } from '../../store/api/authApiSlice'
 const ID_REGEX = new RegExp('^[a-z0-9_-]{6,11}$')
 
 const SignUpIdForm = () => {
-  const [inputValue, setInputValue] = useState(null)
+  const [inputValue, setInputValue] = useState('')
   const [isCheckUsername, setIsCheckUsername] = useState(false)
   const [alret, setAlret] = useState(null)
   const [active, setActive, onFocusHandler] = useInputValue()
   const { error, isError } = useCheckUsernameQuery(inputValue, {
-    skip: !inputValue && !alret,
+    skip: inputValue.length < 6 && !alret,
   })
 
   const ChangeHandler = (e) => {
@@ -82,7 +82,9 @@ const SignUpIdForm = () => {
         <NextBtn
           next="pwform"
           inputValue={inputValue}
-          disabled={inputValue && !alret && isError && error.status !== 500}
+          disabled={
+            inputValue.length && !alret && isError && error.status !== 500
+          }
         >
           다음
         </NextBtn>

@@ -4,22 +4,40 @@ import {
   useAddFavoriteItemMutation,
   useDeleteFavoriteItemMutation,
 } from '../../../store/api/favoriteApiSlice'
+import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { changeFavoriteItems } from '../../../store/slices/favoriteSlice'
 
-const AnotherCard = ({ item, favorites }) => {
+const AnotherCard = ({ item, favorites, token }) => {
+  const dispatch = useDispatch()
   const { thumbnail, productName, price, sale } = item
-  const [addFavoriteItem] = useAddFavoriteItemMutation()
-  const [deleteFavoriteItem] = useDeleteFavoriteItemMutation()
+  const [addFavoriteItem] = useAddFavoriteItemMutation(undefined, {
+    skip: !token,
+  })
+  const [deleteFavoriteItem] = useDeleteFavoriteItemMutation(undefined, {
+    skip: !token,
+  })
   const isFavorite = useMemo(
     () => favorites?.some((element) => element.productId === item.productId),
     [favorites, item],
   )
-  const onHeartClick = useCallback(() => {
-    isFavorite
-      ? deleteFavoriteItem({ product_id: item.productId })
-      : addFavoriteItem({ product_id: item.productId })
-  }, [isFavorite, item])
+  const onHeartClick = useCallback(
+    (e) => {
+      e.stopPropagation()
+      token
+        ? isFavorite
+          ? deleteFavoriteItem({ product_id: item.productId })
+          : addFavoriteItem({ productId: item.productId })
+        : dispatch(changeFavoriteItems({ productId: item.productId }))
+    },
+    [isFavorite, item],
+  )
+  const navigate = useNavigate()
+  const goDetailPage = (e) => {
+    navigate(`/product/${item.productId}`)
+  }
   return (
-    <div>
+    <div onClick={goDetailPage}>
       <div
         className="new-style w-[142px] h-[142px] bg-cover rounded-full overflow-hidden border-primary border"
         style={{
@@ -36,7 +54,9 @@ const AnotherCard = ({ item, favorites }) => {
             {parseInt((price * (100 - sale)) / 100).toLocaleString()} ¥
           </span>
         </div>
-        <HeartIcon size="15" off={!isFavorite} onHeartClick={onHeartClick} />
+        <div onClick={onHeartClick}>
+          <HeartIcon size="17" off={!isFavorite} />
+        </div>
       </div>
     </div>
   )

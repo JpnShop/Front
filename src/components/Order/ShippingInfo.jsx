@@ -21,7 +21,6 @@ const ShippingInfo = () => {
   const data = useSelector((state) => state.shippingInfo)
   const [guestAddInfo] = useGuestAddInfoMutation()
   const { data: result } = useGetUserInfoQuery()
-  result && console.log('result', result)
   const saveShippinInfo = async () => {
     try {
       const response = await guestAddInfo({
@@ -36,7 +35,6 @@ const ShippingInfo = () => {
         lastName: data?.lastName,
         phoneNumber: data?.phoneNumber,
       })
-      console.log(response)
       if (!response?.error) {
         alert('주소지가 저장되었습니다.')
       } else {

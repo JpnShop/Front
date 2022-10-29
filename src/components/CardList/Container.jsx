@@ -1,18 +1,29 @@
 import React from 'react'
 import Card from './Card'
 import NoList from './NoList'
-import {
-  useAddFavoriteItemMutation,
-  useDeleteFavoriteItemMutation,
-} from '../../store/api/favoriteApiSlice'
+import { useSelector } from 'react-redux'
+import { useGetFavoriteItemsQuery } from '../../store/api/favoriteApiSlice'
+import { useCookies } from 'react-cookie'
 
-function Container({ list, pt = 'pt-52', favorites }) {
+function Container({ list, pt = 'pt-52' }) {
+  const [cookies, setCookie, removeCookie] = useCookies()
+  const token = cookies.accessToken
+  const { data: favorites } = useGetFavoriteItemsQuery(undefined, {
+    skip: !token,
+  })
+  const favriteItems = useSelector((state) => state.favorites)
+
   return (
     <div className={`${pt}`}>
       {list && list.length > 0 ? (
         <div className="w-full grid grid-cols-2 gap-[2px]">
           {list.map((item, idx) => (
-            <Card key={idx} data={item} favorites={favorites} />
+            <Card
+              key={idx}
+              data={item}
+              favorites={token ? favorites : favriteItems}
+              token={token}
+            />
           ))}
         </div>
       ) : (

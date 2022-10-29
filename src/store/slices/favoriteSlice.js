@@ -15,15 +15,17 @@ export const favoritesSlice = createSlice({
   initialState,
   reducers: {
     changeFavoriteItems(state, action) {
-      let id = state.findIndex((item) => {
-        return item.productId === action.payload.productId
-      })
-      if (id === -1) {
-        state.push(action.payload)
+      if (state.some((item) => item.productId === action.payload.productId)) {
+        state = state.filter(
+          (item) => item.productId !== action.payload.productId,
+        )
+        localStorage.setItem('favoriteItems', JSON.stringify(state))
+        return state
       } else {
-        state = state.slice(id, 1)
+        state.push(action.payload)
+        localStorage.setItem('favoriteItems', JSON.stringify(state))
+        return state
       }
-      localStorage.setItem('favoriteItems', JSON.stringify(state))
     },
   },
 })

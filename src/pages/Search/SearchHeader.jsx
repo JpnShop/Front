@@ -76,8 +76,12 @@ const SearchHeader = ({ setGoSearch }) => {
     }, 300)
   }
 
+  const onSubmitHandler = (e) => {
+    e.preventDefault()
+  }
+
   return (
-    <div>
+    <form onSubmit={onSubmitHandler}>
       <div className="w-full flex items-center overflow-hidden bg-white z-40">
         <div className="w-full h-16 max-w-[600px] px-5 flex items-center">
           <BackOn size="24" onClick={() => navigate(-1)} />
@@ -103,7 +107,7 @@ const SearchHeader = ({ setGoSearch }) => {
           </div>
         </div>
       </div>
-    </div>
+    </form>
   )
 }
 

@@ -3,11 +3,13 @@ import Header from '../layout/Header'
 import CartItem from './CartItem'
 import Total from './Total'
 import CartBtn from './CartBtn'
+import { useDeleteCartItemMutation } from '../../store/api/cartApiSlice'
 import { useNavigate } from 'react-router-dom'
 
 const Cart = ({ cartItems }) => {
   const [checkedItems, setCheckedItems] = useState(cartItems)
   const navigate = useNavigate()
+  const [deleteCartItem] = useDeleteCartItemMutation()
 
   const onCheckedHandler = (item) => {
     checkedItems.includes(item)
@@ -15,7 +17,15 @@ const Cart = ({ cartItems }) => {
       : setCheckedItems(checkedItems.concat(item))
   }
 
-  console.log(cartItems)
+  const deleteSeleteItem = async () => {
+    await checkedItems.map((item) =>
+      deleteCartItem({ product_id: item.productId }),
+    )
+  }
+
+  useEffect(() => {
+    setCheckedItems(cartItems)
+  }, [cartItems])
 
   return (
     <div className="pb-[80px]">
@@ -27,9 +37,11 @@ const Cart = ({ cartItems }) => {
           <div className="text-black-400 text-xs">
             전체 {cartItems?.length}개
           </div>
-          <div className="text-point text-xs">선택 삭제</div>
+          <div className="text-point text-xs" onClick={deleteSeleteItem}>
+            선택 삭제
+          </div>
         </div>
-        {cartItems.length === 0 && (
+        {cartItems?.length === 0 && (
           <div className="px-5">
             <h2 className=" mt-[150px] text-[20px] font-bold ml-2 pl-6 text-center">
               장바구니에 상품이 없습니다.
@@ -42,7 +54,7 @@ const Cart = ({ cartItems }) => {
             </div>
           </div>
         )}
-        {cartItems.map((item, idx) => (
+        {cartItems?.map((item, idx) => (
           <CartItem
             item={item}
             key={idx}
@@ -50,7 +62,7 @@ const Cart = ({ cartItems }) => {
           />
         ))}
       </div>
-      {cartItems.length !== 0 && (
+      {cartItems?.length !== 0 && (
         <>
           <Total items={checkedItems} />
           <CartBtn items={checkedItems} />

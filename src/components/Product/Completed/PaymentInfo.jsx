@@ -1,6 +1,8 @@
 import React from 'react'
+import { useGetUserInfoQuery } from '../../../store/api/userApiSlice'
 
-const PaymentInfo = ({ items }) => {
+const PaymentInfo = ({ items, paymathod, createDate }) => {
+  const { data } = useGetUserInfoQuery()
   return (
     <>
       <div className="py-9">
@@ -8,15 +10,22 @@ const PaymentInfo = ({ items }) => {
         <div className=" mt-[20px] w-full text-sm border-b border-black-100">
           <div className="grid  grid-cols-2 border-t border-black-200 leading-9  py-1">
             <div className="text-black-400">결제방법</div>
-            <div className="text-black-800">라인페이</div>
+            <div className="text-black-800">{paymathod}</div>
           </div>
           <div className="grid  grid-cols-2  border-t border-black-200 leading-9  py-1">
             <div className="text-black-400">주문접수일시</div>
-            <div className="text-black-800">2022.10.03 19:31 PM</div>
+            <div className="text-black-800">
+              {createDate.getFullYear()}.{createDate.getMonth() + 1}.
+              {createDate.getDate()}
+            </div>
           </div>
           <div className="grid  grid-cols-2  border-t border-black-200 leading-9 py-1">
             <div className="text-black-400">결제완료일시</div>
-            <div className="text-black-800">2022.10.03 19:31 PM</div>
+            <div className="text-black-800">
+              {' '}
+              {createDate.getFullYear()}.{createDate.getMonth() + 1}.
+              {createDate.getDate()}
+            </div>
           </div>
           <div className="grid  grid-cols-2  border-t border-black-200 leading-9  py-1">
             <div className="text-black-400">할인금액</div>

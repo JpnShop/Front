@@ -2,20 +2,34 @@ import React from 'react'
 import { cls } from '../../utils'
 import { useNavigate } from 'react-router-dom'
 import { useAddOrdersMutation } from '../../store/api/orderApiSlice'
+import { useDispatch } from 'react-redux'
+import { resetCount } from '../../store/slices/productSlice'
 
 const OrderBtn = ({ items, paymathod }) => {
   const navigate = useNavigate()
-  const [addOrders] = useAddOrdersMutation()
+  const dispatch = useDispatch()
+  const [addOrders, { isLoading, isError, isSuccess }] = useAddOrdersMutation()
   const products = items.map((item) => {
     return {
-      product_id: item.productId,
-      count: item.count,
+      totalOrders: {
+        productId: item.productId,
+        count: item.count,
+      },
     }
   })
   const [product] = products
-  const paynowHandler = (id) => {
-    addOrders({ ...product, paymathod })
-    navigate('/order/completed', { state: items })
+  const paynowHandler = async () => {
+    try {
+      const orderData = await addOrders({ ...product, paymathod })
+      const createDate = new Date()
+      navigate('/order/completed', { state: { items, paymathod, createDate } })
+    } catch (error) {
+      console.log(error)
+    } finally {
+      setTimeout(() => {
+        dispatch(resetCount())
+      }, 2000)
+    }
   }
   const [item] = items
   return (

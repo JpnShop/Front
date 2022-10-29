@@ -4,37 +4,52 @@ import {
   useAddFavoriteItemMutation,
   useDeleteFavoriteItemMutation,
 } from '../../../store/api/favoriteApiSlice'
+import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { changeFavoriteItems } from '../../../store/slices/favoriteSlice'
 
-const SimiliarCard = ({ item, favorites }) => {
-  const [addFavoriteItem] = useAddFavoriteItemMutation()
-  const [deleteFavoriteItem] = useDeleteFavoriteItemMutation()
+const SimiliarCard = ({ item, favorites, token }) => {
+  const [addFavoriteItem] = useAddFavoriteItemMutation(undefined, {
+    skip: !token,
+  })
+  const [deleteFavoriteItem] = useDeleteFavoriteItemMutation(undefined, {
+    skip: !token,
+  })
   const isFavorite = useMemo(
     () => favorites?.some((element) => element.productId === item.productId),
     [favorites, item],
   )
-
-  const onHeartClick = useCallback(() => {
-    isFavorite
-      ? deleteFavoriteItem({ product_id: item.productId })
-      : addFavoriteItem({ product_id: item.productId })
-  }, [isFavorite, item])
-
-  console.log('이게무슨일이야?', isFavorite)
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const goDetailPage = (e) => {
+    navigate(`/product/${item.productId}`)
+  }
+  const onHeartClick = useCallback(
+    (e) => {
+      e.stopPropagation()
+      token
+        ? isFavorite
+          ? deleteFavoriteItem({ product_id: item.productId })
+          : addFavoriteItem({ productId: item.productId })
+        : dispatch(changeFavoriteItems({ productId: item.productId }))
+    },
+    [isFavorite, item],
+  )
 
   return (
-    <div>
+    <div onClick={goDetailPage}>
       <div
-        className="w-[130px] h-[131px] bg-cover"
+        className="w-[150px] h-[150px] bg-cover"
         style={{
           backgroundImage: `url(${item.thumbnail})`,
         }}
       ></div>
-      <div className="flex justify-between items-center mt-1 px-2">
+      <div className="w-[150px] flex justify-between items-center mt-1 px-2">
         <span className="text-sm font-bold truncate overflow-ellipsis w-[130px]">
           {item.brand}
         </span>
         <div onClick={onHeartClick}>
-          <HeartIcon size="15" off={!isFavorite} />
+          <HeartIcon size="17" off={!isFavorite} />
         </div>
       </div>
       <div className=" overflow-ellipsis text-[10px] text-black-800 truncate w-[125px] px-2 mt-2">

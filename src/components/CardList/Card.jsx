@@ -1,20 +1,26 @@
 import React, { useMemo, useCallback } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { cls } from '../../utils'
-import heart from '/public/assets/heart-on.svg'
 import HeartIcon from '../common/HeartIcon'
 import {
   useAddFavoriteItemMutation,
   useDeleteFavoriteItemMutation,
 } from '../../store/api/favoriteApiSlice'
+import { changeFavoriteItems } from '../../store/slices/favoriteSlice'
+import { useDispatch } from 'react-redux'
 
-function Card({ data, purchase, favorites }) {
+function Card({ data, purchase, favorites, token }) {
+  const dispatch = useDispatch()
   const { brand, productName, thumbnail, price, sale } = data
   const saleCost = parseInt((price * (100 - sale)) / 100)
   const location = useLocation().pathname
   const navigate = useNavigate()
-  const [addFavoriteItem] = useAddFavoriteItemMutation()
-  const [deleteFavoriteItem] = useDeleteFavoriteItemMutation()
+  const [addFavoriteItem] = useAddFavoriteItemMutation(undefined, {
+    skip: !token,
+  })
+  const [deleteFavoriteItem] = useDeleteFavoriteItemMutation(undefined, {
+    skip: !token,
+  })
   const isFavorite = useMemo(
     () => favorites?.some((element) => element.productId === data.productId),
     [favorites, data],
@@ -22,9 +28,11 @@ function Card({ data, purchase, favorites }) {
   const onHeartClick = useCallback(
     (e) => {
       e.stopPropagation()
-      isFavorite
-        ? deleteFavoriteItem({ product_id: data.productId })
-        : addFavoriteItem({ product_id: data.productId })
+      token
+        ? isFavorite
+          ? deleteFavoriteItem({ product_id: data.productId })
+          : addFavoriteItem({ productId: data.productId })
+        : dispatch(changeFavoriteItems({ productId: data.productId }))
     },
     [isFavorite, data],
   )
@@ -65,14 +73,18 @@ function Card({ data, purchase, favorites }) {
             {productName}
           </div>
           {!purchase && (
-            <div className="test-xs font-medium text-black-600">{price} ¥</div>
+            <div className="test-xs font-medium text-black-600">
+              {price.toLocaleString()} ¥
+            </div>
           )}
         </div>
         {!purchase ||
           (!location.includes('recent-view') && (
             <div className="flex text-sm font-bold">
               <div className="text-primary mr-3">{sale}%</div>
-              <div className="text-black-100">{saleCost} ¥</div>
+              <div className="text-black-100">
+                {saleCost.toLocaleString()} ¥
+              </div>
             </div>
           ))}
       </div>

@@ -9,7 +9,7 @@ const ContentBox = ({ item, ModalControlHandler }) => {
   const navigate = useNavigate()
 
   const viewDetail = () => {
-    if (item.privateYn === '비공개') {
+    if (item.privateYn) {
       return ModalControlHandler()
     }
     navigate(`/my/qna/${item?.id}`)
@@ -21,13 +21,13 @@ const ContentBox = ({ item, ModalControlHandler }) => {
         <div className="flex items-center justify-between py-4 ">
           <p className="font-bold">{item?.createdDate?.slice(0, -9)}</p>
           <div className="flex items-center gap-1">
-            <span className="text-xs" onClick={() => viewDetail()}>
+            <span className="text-xs" onClick={viewDetail}>
               답변상세보기
             </span>
             <BackIcon fill="#252525" size={14} className="rotate-180" />
           </div>
         </div>
-        {item.privateYn === '비공개' ? (
+        {item.privateYn ? (
           <PrivateContent item={item} />
         ) : (
           <PublicContent item={item} />

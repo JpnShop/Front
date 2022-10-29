@@ -5,10 +5,7 @@ const OrderProductInfo = ({ items }) => {
     <div className="py-9 border-b border-black-200">
       <h3 className="mb-3.5">주문상품정보</h3>
       {items.map(
-        (
-          { productId, thumbnail, price, count, brand, productName, sale },
-          idx,
-        ) => (
+        ({ productId, thumbnail, price, count, brand, productName, sale }) => (
           <div className="flex mt-3" key={productId}>
             <div
               className="mr-5 relative flex-shrink w-[100px] h-[100px] bg-cover  overflow-hidden "
