@@ -7,11 +7,13 @@ import QnABtn from './QnABtn'
 import Modal from '../../common/Modal'
 import CloseIcon from '../../common/CloseIcon'
 import useModalControl from '../../../hook/useModalControl'
+import { useGetProductQuery } from '../../../store/api/productApiSlice'
 import { useAddQuestionMutation } from '../../../store/api/questionApiSlice'
-import { Outlet } from 'react-router-dom'
+import { Navigate, Outlet, useNavigate } from 'react-router-dom'
 
 const index = () => {
   const [count, setCount] = useState(0)
+  const [dataId, setDataId] = useState(null)
   const [userValue, setUserValue] = useState({
     id: null,
     Product: null,
@@ -22,11 +24,13 @@ const index = () => {
     privateYn: false,
     password: null,
     images: [],
-    createdDate: null,
+    createdDate: new Date(),
   })
   const [imageFile, setImageFile] = useState([])
   const [isOpen, ModalControlHandler] = useModalControl()
+  const navigate = useNavigate()
   const [addQuestion] = useAddQuestionMutation()
+  const { data: productDatas } = useGetProductQuery(dataId, { skip: !dataId })
   const FileRef = useRef()
   const onChangeHandler = (e) => {
     const { name, value } = e.target
@@ -83,10 +87,11 @@ const index = () => {
       })
     }
   }
-  const AddQuestionHandler = () => {
+  const AddQuestionHandler = async () => {
     if (!userValue.title || !userValue.content) {
-      ModalControlHandler()
+      return ModalControlHandler()
     }
+
     const formData = new FormData()
 
     for (const key in userValue) {
@@ -97,7 +102,17 @@ const index = () => {
       }
     }
     // addQuestion(formData)
-    addQuestion(userValue)
+    try {
+      const { error } = await addQuestion({ userValue, dataId })
+      if (error.originalStatus === 200) {
+        alert(error.data)
+      } else {
+        alert('서버상의 문제가 발생했습니다.')
+      }
+      navigate('/my/qna')
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   const removeThumbnail = (idx) => {
@@ -110,7 +125,7 @@ const index = () => {
     return (
       <>
         {imageFile?.map((item, idx) => (
-          <div className="relative flex gap-2">
+          <div className="relative flex gap-2" key={idx}>
             <div
               className="relative w-[86px] h-[86px] bg-cover rounded overflow-hidden shawdow-md"
               style={{
@@ -131,13 +146,39 @@ const index = () => {
     )
   })
 
+  useEffect(() => {
+    console.log(userValue)
+  }, [userValue])
+
   return (
     <>
-      <Type
-        types={types}
-        userValue={userValue}
-        onChangeCheckedHandler={onChangeCheckedHandler}
-      />
+      {dataId ? (
+        productDatas && (
+          <div className="px-5 mb-5">
+            <h3 className="font-bold my-5">{userValue.type}</h3>
+            <div
+              className="bg-cover overflow-hidden relative w-[calc((100vw-48px)/3)] h-[calc((100vw-48px)/3)]"
+              style={{
+                backgroundImage: `url(${productDatas.thumbnail})`,
+              }}
+            ></div>
+            <div className="w-[calc((100vw-48px)/3)] mt-[6px]">
+              <div className="text-[14px] font-bold">{productDatas.brand}</div>
+              <div className="text-[10px] text-black-800 truncate">
+                {productDatas.productName}
+              </div>
+            </div>
+          </div>
+        )
+      ) : (
+        <Type
+          types={types}
+          userValue={userValue}
+          setDataId={setDataId}
+          onChangeCheckedHandler={onChangeCheckedHandler}
+        />
+      )}
+
       <div className="w-full h-[10px] bg-white-200 my-4"></div>
       <Content
         count={count}

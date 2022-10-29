@@ -17,14 +17,15 @@ export const questionApi = apiSlice.injectEndpoints({
       query: () => 'customers/questions/my',
     }),
     getMyDetailQuestion: builder.query({
-      query: (id) => `customers/questions/${id}`,
+      query: (id) => `customers/questions/${id}?password=0`,
     }),
     addQuestion: builder.mutation({
-      query: (data) => {
+      query: ({ userValue, dataId }) => {
+        console.log(userValue, dataId)
         return {
-          url: `customers/questions/1`,
+          url: `customers/questions/${dataId}`,
           method: 'POST',
-          body: data,
+          body: userValue,
         }
       },
     }),
