@@ -6,7 +6,13 @@ import { ReactComponent as Checked } from '/public/assets/allCheck.svg'
 import { useNavigate } from 'react-router-dom'
 import InquireProducts from './InquireProducts'
 
-const Type = ({ types, userValue, onChangeCheckedHandler }) => {
+const Type = ({
+  types,
+  userValue,
+  onChangeCheckedHandler,
+  dataId,
+  setDataId,
+}) => {
   const navigate = useNavigate()
   const [isOpen, setIsOpen] = useState(false)
   const controlOpenHandler = () => {
@@ -55,7 +61,11 @@ const Type = ({ types, userValue, onChangeCheckedHandler }) => {
         )}
       >
         {isOpen && (
-          <InquireProducts isOpen={isOpen} onClick={controlOpenHandler} />
+          <InquireProducts
+            setIsOpen={setIsOpen}
+            onClick={controlOpenHandler}
+            setDataId={setDataId}
+          />
         )}
       </div>
     </>

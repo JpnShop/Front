@@ -2,13 +2,17 @@ import React, { useState, useRef } from 'react'
 import ContentBox from './ContentBox'
 import Modal from '../../common/Modal'
 import useOutSideHook from '../../../hook/useOutSideHook'
+import { useNavigate } from 'react-router-dom'
 
 const QnAList = ({ questions }) => {
-  const [modalFalg, setModalFalg] = useState(false)
+  const navigate = useNavigate()
+  const [modalFlag, setModalFlag] = useState(false)
+
   const modalRef = useRef(null)
   useOutSideHook(modalRef, () => {
-    setModalFalg(false)
+    setModalFlag((prev) => !prev)
   })
+
   return (
     <>
       {questions.length === 0 && (
@@ -23,16 +27,14 @@ const QnAList = ({ questions }) => {
           id="test"
           item={item}
           key={item.id}
-          ModalControlHandler={() => setModalFalg(true)}
+          ModalControlHandler={() => setModalFlag((prev) => !prev)}
         />
       ))}
-      {modalFalg && (
-        <div ref={modalRef}>
-          <Modal
-            onClick={() => setModalFalg(false)}
-            title="작성자만 볼 수 있습니다."
-          />
-        </div>
+      {modalFlag && (
+        <Modal
+          onClick={() => setModalFlag((prev) => !prev)}
+          title="비공개 글입니다."
+        ></Modal>
       )}
     </>
   )
