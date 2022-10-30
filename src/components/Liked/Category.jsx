@@ -5,10 +5,10 @@ import HeaderLink from '../layout/Header/HeaderLink'
 export const Category = () => {
   const category = {
     like: '상품',
-    'liked-brand': '브랜드',
-    'liked-magazine': '매거진',
-    'liked-oneul': '오늘',
-    'recent-view': '최근 본',
+    'like/liked-brand': '브랜드',
+    'like/liked-magazine': '매거진',
+    'like/liked-oneul': '오늘',
+    'like/recent-view': '최근 본',
   }
   const navigate = useNavigate()
   const { pathname } = useLocation()
