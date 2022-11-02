@@ -51,7 +51,7 @@ function NoResult() {
           <div className="font-bold">최근 본 상품</div>
           <button
             className="text-xs font-medium text-black-400 flex items-center"
-            onClick={() => navigate('/recent-view')}
+            onClick={() => navigate('/like/recent-view')}
           >
             더 보기
             <BackIcon size={10} fill={'#9c9c9c'} className="rotate-180 ml-px" />

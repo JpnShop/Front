@@ -9,7 +9,7 @@ function RecentView() {
   const recentViewProduct = 'recentViewProduct'
   const recentViews = JSON.parse(localStorage.getItem(recentViewProduct))
   // API요청 보낼 query string 연결
-  const queryString = recentViews.map((id) => `productId=${id}`).join('&')
+  const queryString = recentViews?.map((id) => `productId=${id}`).join('&')
   const {
     data: recentList,
     isLoading,

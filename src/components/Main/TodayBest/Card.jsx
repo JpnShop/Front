@@ -36,7 +36,7 @@ const Card = ({ product, active, favorites, token }) => {
       token
         ? isFavorite
           ? deleteFavoriteItem({ product_id: product.productId })
-          : addFavoriteItem({ productId: product.productId })
+          : addFavoriteItem({ product_id: product.productId })
         : dispatch(changeFavoriteItems({ productId: product.productId }))
     },
     [isFavorite, product],

@@ -85,8 +85,8 @@ function App() {
               <Route path="/oneul" element={<Oneul />} />
               <Route path="/like" element={<Like />}>
                 <Route path="" element={<Liked />} />
+                <Route path="recent-view" element={<RecentView />} />
               </Route>
-              <Route path="recent-view" element={<RecentView />} />
               <Route path="/my" element={<MyPage />}>
                 <Route index element={<MyPageComp />} />
                 <Route path="review" element={<MyReview />}>

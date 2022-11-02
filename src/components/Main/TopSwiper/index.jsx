@@ -85,7 +85,10 @@ const TopSwiper = () => {
         {postList.map((element, index) => {
           return (
             <SwiperSlide className="topslide" key={index}>
-              <div onClick={() => navigate('/event')}>
+              <div
+                onClick={() => navigate('/event')}
+                className="w-full relative h-[100vw]"
+              >
                 <Slide className="topslide" item={element} />
               </div>
             </SwiperSlide>
