@@ -23,10 +23,10 @@ const NavBottom = () => {
             to="/category"
             className={cls(
               'flex items-center flex-col ',
-              currentPath === '/category' ? 'text-primary' : '',
+              currentPath.includes('/category') ? 'text-primary' : '',
             )}
           >
-            {currentPath === '/category' ? (
+            {currentPath.includes('/category') ? (
               <CategoryIconOn />
             ) : (
               <CategoryIcon />
@@ -38,10 +38,10 @@ const NavBottom = () => {
             to="/oneul"
             className={cls(
               'flex items-center flex-col  ',
-              currentPath === '/oneul' ? 'text-primary' : '',
+              currentPath.includes('/oneul') ? 'text-primary' : '',
             )}
           >
-            {currentPath === '/oneul' ? <OnulIconOn /> : <OnulIcon />}
+            {currentPath.includes('/oneul') ? <OnulIconOn /> : <OnulIcon />}
           </Link>
         </li>
         <li>
@@ -60,10 +60,10 @@ const NavBottom = () => {
             to="/like"
             className={cls(
               'flex items-center flex-col  ',
-              currentPath === '/like' ? 'text-primary' : '',
+              currentPath.includes('/like') ? 'text-primary' : '',
             )}
           >
-            {currentPath === '/like' ? <LikeIconOn /> : <LikeIcon />}
+            {currentPath.includes('/like') ? <LikeIconOn /> : <LikeIcon />}
           </Link>
         </li>
         <li>
@@ -71,10 +71,10 @@ const NavBottom = () => {
             to="/my"
             className={cls(
               'flex items-center flex-col  ',
-              currentPath === '/my' ? 'text-primary' : '',
+              currentPath.includes('/my') ? 'text-primary' : '',
             )}
           >
-            {currentPath === '/my' ? <MyIconOn /> : <MyIcon />}
+            {currentPath.includes('/my') ? <MyIconOn /> : <MyIcon />}
           </Link>
         </li>
       </ul>

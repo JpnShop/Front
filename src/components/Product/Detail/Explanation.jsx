@@ -32,7 +32,7 @@ const Explanation = ({ list, favorites, token }) => {
       token
         ? isFavorite
           ? deleteFavoriteItem({ product_id: list.productId })
-          : addFavoriteItem({ productId: list.productId })
+          : addFavoriteItem({ product_id: list.productId })
         : dispatch(changeFavoriteItems({ productId: list.productId }))
     },
     [isFavorite, list],
